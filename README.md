@@ -1,59 +1,167 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Milestone Two
+Introduction
+------------------------------
+Screenshot of Homepage
+------------------------------
+description of project
+------------------------------
 
-Welcome USER_NAME,
+UX
+------------------------------
+Goals
+------------------------------
+User goals
+* .
+* .
+* .
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+Industry/ Business Goals
+* .
+* .
+* .
 
-## Gitpod Reminders
+User Stories
+As a ____________________, I want:
+* .
+* .
+* .
+------------------------------
+Design
+------------------------------
+Colour Scheme
+------------------------------
+The two main colours used are
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Typography
+------------------------------
+The __________________ font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly...
 
-`python3 -m http.server`
+Imagery
+------------------------------
 
-A blue button should appear to click: _Make Public_,
+Wireframes
+Balsamiq was used to design the wireframes for this project. 
+There were the following amendments made to the original wireframes that resulted in the completed project:
 
-Another blue button should appear to click: _Open Browser_.
+------------------------------
+AmIResponsive screenshots below
+------------------------------
+Home Page for Desktop
+Gallery Page for Desktop
+About Page for Desktop
+Contact Page for Desktop
+Home Page for Mobile
+Gallery Page for Mobile
+About Page for Mobile
+Contact Page for Mobile
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+------------------------------
+Features
+------------------------------
+Existing features
+On all pages:
 
-A blue button should appear to click: _Make Public_,
+On each page:
 
-Another blue button should appear to click: _Open Browser_.
+------------------------------
+Features left to implement
+------------------------------
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+------------------------------
+Technologies Used
+------------------------------
+### Tools
 
-To log into the Heroku toolbelt CLI:
+Git was used to handle version control.
+GitHub was used to store and share project code.
+Am I Responsive was used to create images in this Readme file of each page displayed on different screen sizes.
+The Windows Snipping Tool for images in this Readme of smaller sections of website pages.
+Balsamiq was used to create the wireframes during the design process.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Languages Used
+HTML5
+CSS3
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
+### Frameworks and Libraries Used
+Bootstrap:
+used to assist with the responsiveness and styling of the website.
+Hover pseudoclass in CSS:
+Hover was used for each item in the navbar to add an underline element while being hovered over; this would add an element of responsiveness to the user whilst using the site.
+Google Fonts:
+Google fonts were used to import the Fira Sans font into the style.css file which is used on all pages throughout the project.
+Font Awesome:
+Font Awesome was used on all pages in the footer to make the links to social media more aesthetically pleasing, and to help improve the UX.
 
-## Updates Since The Instructional Video
+### Testing
+Automated Testing
+------------------------------
+Validation Services
+------------------------------
+* The W3C CSS Validation Service - Jigsaw was used for CSS code in this project, which the code passed with no errors or warnings.
+* The W3C Markup Validation Service was used for HTML code in this project, and the code passed with no errors or warnings.
+* In Chrome Developer Tools, Lighthouse reports were generated to see if there were any ways that the website could be optimised or enhanced.
+* Homepage Lighthouse Summary
+* Gallery Page Lighthouse Summary
+* About Page Lighthouse Summary
+* Contact Page Lighthouse Summary
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+------------------------------
+User Stories Testing
+------------------------------
+* As a ______________, I want:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+------------------------------
+Manual Testing
+------------------------------
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Bugs Discovered
+------------------------------
+Solved Bugs
+------------------------------
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Known Bugs
+------------------------------
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+------------------------------
+Further Testing
+All pages were viewed on all devides and orientations available on Chrome Developer Tools.
+------------------------------
+Deployment
+------------------------------
+Github pages
+The project was deployed to Github Pages using the following steps:
+Log in to Github and navigate to the Github repository
+Under the repository name, click 'Settings'.
+In the left sidebar, click 'Pages'.
+Under 'Github Pages', click the 'None' dropdown arrow, and choose the Master branch.
+Click Save.
+The site is then ready to be published at the link.
+------------------------------
+How to Run Project Locally
+------------------------------
+To clone this project into Gitpod you will need:
+* A Github account. Create a Github account here
+* Google Chrome browser.
+Then, follow these steps:
+* Install the Gitpod Browser Extensions for Chrome
+* Restart your browser.
+* Log into Gitpod with your account.
+* Navigate to the Project Github repository
+* Click the green 'Gitpod' button. This will trigger a new Gitpod workspace, created from the code in Github, where you can work locally.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+------------------------------
+Credits
+------------------------------
+Content
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Code
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
----
-
-Happy coding!
+The Readme file's structure was based on, and adapted from, Code: Institute's Anna Greave's Readme for her website, viewable here.
+The deployment instructions were based on those from the GitHub docs, viewable here.
+------------------------------
+Acknowledgements
+------------------------------
+Special thanks to my mentor Gerry Mcbride for patiently going through my code and correcting where necessary, giving helpful ideas and direction, and keeping me informed what is expected of my website and code in industry.
+------------------------------
+Disclaimer
+The contents of this website are for educational purposes only.
