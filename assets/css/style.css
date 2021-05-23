@@ -64,7 +64,7 @@
     
     }
 
-.col-4 {
+.col-6 {
     padding: 5%;
     margin-left: auto;
     margin-right: auto;
@@ -82,6 +82,8 @@
     padding: 15px;
     border-radius: 50%;
     box-shadow: 0 0 15px 0;
+    margin-left: 20%;
+    margin-right: 20%;
     }
 
 @media only screen and (max-width: 968px) {
@@ -96,4 +98,10 @@
         height: 120px;
         width: 120px;
     }
+}
+
+.game-controls {
+    margin-left: 50%;
+    color: white;
+    font-size: x-large;
 }
