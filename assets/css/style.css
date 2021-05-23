@@ -34,7 +34,7 @@
     background-color: rgba(0,0,0,.15);
 }
 
-
+/*-----------------------------butterfly banner-------------------------------------*/
 
 .butterfly-banner {
         background: url("/assets/images/butterfly_banner.jpg") no-repeat center center; 
@@ -57,13 +57,18 @@
   }
 
 .image-div {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10% 25% 0 25%;
-    justify-content: space-between;
-    align-content: space-between;
-    width: 50%;
+    width: 100%;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
     }
+
+.col-4 {
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @media only screen and (max-width: 600px) {
     body {
@@ -72,9 +77,9 @@
 }
 
 .image {
-    height: 215px;
-    width: 240px;
-    padding: 20px;
+    height: 250px;
+    width: 300px;
+    padding: 15px;
     border-radius: 50%;
     box-shadow: 0 0 15px 0;
     }
