@@ -19,16 +19,30 @@ body {
     width: 50%;
     }
 
-@media only screen and (min-width: 928px) {
-    .image {
-        padding: 40%;
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
     }
 }
-    
+
 .image {
-    height: 230px;
-    width: 250px;
+    height: 215px;
+    width: 240px;
     padding: 20px;
     border-radius: 50%;
     box-shadow: 0 0 15px 0;
     }
+
+@media only screen and (max-width: 968px) {
+    .image {
+        height: 180px;
+        width: 180px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .image {
+        height: 120px;
+        width: 120px;
+    }
+}
