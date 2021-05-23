@@ -1,9 +1,55 @@
+/*-----------------------------nav bar-------------------------------------*/
 
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #d3d3d3;
+}
+
+.dropdown-toggle:focus {
+    color: #d3d3d3;
+}
+
+.nav-item:focus {
+    color: #d3d3d3;
+}
+
+.dropdown-menu {
+    background-color: rgba(0,0,0,.15);
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    color: #d3d3d3;
+    background-color: rgba(0,0,0,.15);
+}
+
+.dropdown-item:focus {
+    color: #d3d3d3;
+    background-color: rgba(0,0,0,.15);
+}
+
+
+
+.butterfly-banner {
+        background: url("/assets/images/butterfly_banner.jpg") no-repeat center center; 
+        height: 40vh;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
 
 /*-----------------------------game.html-------------------------------------*/
 
-body { 
+.background-image { 
     background: url("/assets/images/meadow.jpg") no-repeat center center fixed; 
+    height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
