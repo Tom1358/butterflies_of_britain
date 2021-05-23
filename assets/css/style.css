@@ -15,7 +15,7 @@
     box-shadow: 0 0 15px 0;
 }
 
-#box-1 {
+/*#box-1 {
     background-image: linear-gradient(#ff0000, #e52e2e7c);
 }
 
@@ -29,4 +29,22 @@
 
 #box-4 {
     background-image: linear-gradient(#ffe600, #e5e22e83);
-}
+}*/
+
+/*-----------------------------game.html-------------------------------------*/
+
+.image-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 500px;
+    width: 500px;
+    }
+    
+.image {
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 0;
+    }
