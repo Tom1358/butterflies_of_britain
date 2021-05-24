@@ -24,16 +24,40 @@
     color: white;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover.dropdown-item:focus {
     color: #d3d3d3;
     background-color: rgba(0,0,0,.15);
 }
 
-.dropdown-item:focus {
-    color: #d3d3d3;
+.btn-secondary {
+    color: white;
+    border-color: white;
     background-color: rgba(0,0,0,.15);
 }
 
+.btn-secondary:focus {
+    color: white;
+    border-color: white;
+    background-color: rgba(0,0,0,.15);
+}
+
+.btn-secondary:active {
+    color: white;
+    border-color: white;
+    background-color: rgba(0,0,0,.15);
+}
+
+.btn-secondary:hover {
+    color: white;
+    border-color: white;
+    background-color: rgba(0,0,0,.30);
+}
+
+.show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: rgba(0,0,0,.15);
+    border-color: white;
+}
 /*-----------------------------butterfly banner-------------------------------------*/
 
 .butterfly-banner {
