@@ -1,3 +1,16 @@
+/*-----------------------------grid system-------------------------------------*/
+
+.container-for-grid {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 40vh 80% 60px;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer"
+    ;
+}
+
 /*-----------------------------nav bar-------------------------------------*/
 
 .nav-link {
@@ -68,8 +81,8 @@
 /*-----------------------------butterfly banner-------------------------------------*/
 
 .butterfly-banner {
+        grid-area: header;
         background: url("/assets/images/butterfly_banner.jpg") no-repeat center center; 
-        height: 40vh;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -79,23 +92,31 @@
 /*-----------------------------index.html-------------------------------------*/
 
 .header-one {
+    grid-area: header;
     color: white;
     padding-top: 27vh;
     padding-left: 10px;
 }
 
 .header-two {
+    grid-area: main;
     padding-top: 5vh;
     padding-left: 10px;
 }
 
 .text {
+    grid-area: main;
     padding-left: 10px;
 }
 
 .menu-sidebar {
+    grid-area: sidebar;
     padding-left: 10px;
     width: 25%;
+}
+
+.butterfly-images {
+    grid-area: main;
 }
 
 @media only screen and (max-width: 576px) {
