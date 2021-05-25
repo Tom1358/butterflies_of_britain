@@ -76,6 +76,32 @@
         background-size: cover;
 }
 
+/*-----------------------------index.html-------------------------------------*/
+
+.header-one {
+    color: white;
+    padding-top: 27vh;
+    padding-left: 10px;
+}
+
+.header-two {
+    padding-top: 5vh;
+    padding-left: 10px;
+}
+
+.text {
+    padding-left: 10px;
+}
+
+.menu-sidebar {
+    padding-left: 10px;
+    display: inline;
+}
+
+.butterfly-images {
+
+}
+
 /*-----------------------------game.html-------------------------------------*/
 
 .background-image { 
@@ -99,12 +125,6 @@
     padding: 5%;
     margin-left: auto;
     margin-right: auto;
-}
-
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
-    }
 }
 
 .image {
@@ -133,7 +153,8 @@
 }
 
 .game-controls {
-    margin-left: 50%;
+    display: flex;
+    justify-content: center;
     color: white;
     font-size: x-large;
 }
