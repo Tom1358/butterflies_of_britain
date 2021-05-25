@@ -95,11 +95,15 @@
 
 .menu-sidebar {
     padding-left: 10px;
-    display: inline;
+    width: 25%;
 }
 
-.butterfly-images {
-
+@media only screen and (max-width: 576px) {
+    .butterfly-images {
+        position: absolute;
+        display:flex;
+        justify-content: flex-end;
+    }
 }
 
 /*-----------------------------game.html-------------------------------------*/
