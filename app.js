@@ -11,16 +11,20 @@ butterflyImageFour.addEventListener('click', myFunctionFour);
 
 function myFunction() {
     console.log("Holy sh*t!");
+    butterflyImageOne.style.backgroundColor = "#00FF00";
 }
 
 function myFunctionTwo() {
     console.log("And again!");
+    butterflyImageTwo.style.backgroundColor = "#800000";
 }
 
 function myFunctionThree() {
     console.log("It works!");
+    butterflyImageThree.style.backgroundColor = "#FFFF00";
 }
 
 function myFunctionFour() {
     console.log("I'm programming!");
+    butterflyImageFour.style.backgroundColor = "#0000FF";
 }
