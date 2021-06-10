@@ -10,7 +10,7 @@ let randomNumTwo = Math.floor(Math.random()*4)+1;
 let randomNumThree = Math.floor(Math.random()*4)+1;
 let randomNumFour = Math.floor(Math.random()*4)+1;
 
-// RANDOM BUTTERFLY IMAGE STEP TWO: Change source of images to change picture
+// RANDOM BUTTERFLY IMAGE STEP TWO: Change source of images to change picture (ref https://thisinterestsme.com/change-src-image-javascript/)
 function randomButterflyImageOne() {
     if (randomNumOne === 1) {
         butterflyImageOne.src ='assets/images/brown_argus.jpg';
@@ -98,3 +98,7 @@ function myFunctionFour() {
     console.log("I'm programming!");
     butterflyImageFour.style.backgroundColor = "#0000FF";
 }
+
+// Click start button to play game - n.b. for now just console.log to confirm working
+
+document.getElementById('play-game').addEventListener('click', () => {console.log("it works!")});
