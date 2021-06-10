@@ -100,5 +100,26 @@ function myFunctionFour() {
 }
 
 // Click start button to play game - n.b. for now just console.log to confirm working
+document.getElementById('play-game').addEventListener('click', () => {startGame();});
 
-document.getElementById('play-game').addEventListener('click', () => {console.log("it works!")});
+let level = 0;
+
+function increaseLevel(){
+    
+}
+
+function startGame() {
+    level=1;
+    document.getElementById('level').innerHTML="Level 1";
+}
+
+function compTurn() {
+    if (level=1){
+        //temporarily flash colors of butterfly
+    }
+}
+
+function yourTurn() {
+
+}
+
