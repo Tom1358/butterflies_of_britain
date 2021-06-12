@@ -100,12 +100,22 @@ function myFunctionFour() {
 }
 
 // Click start button to play game - n.b. for now just console.log to confirm working
-document.getElementById('play-game').addEventListener('click', () => {startGame();});
+document.getElementById('play-game').addEventListener('click', (event) => {startGame();}); // or could be '...'click, function() {startGame()...}
 
 let level = 0;
+let win = false;
+
+function clearColor() {
+    butterflyImageOne.style.backgroundColor = none;
+    butterflyImageTwo.style.backgroundColor = none;
+    butterflyImageThree.style.backgroundColor = none;
+    butterflyImageFour.style.backgroundColor = none;
+};
 
 function increaseLevel(){
-    
+    win = true;
+    level++;
+    clearColor();
 }
 
 function startGame() {
