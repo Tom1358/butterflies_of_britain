@@ -102,19 +102,43 @@ function myFunctionFour() {
 // Click start button to play game - n.b. for now just console.log to confirm working
 document.getElementById('play-game').addEventListener('click', (event) => {startGame();}); // or could be '...'click, function() {startGame()...}
 
+// Gets random butterfly image
+let randomButterfly = [
+    butterflyImageOne,
+    butterflyImageTwo,
+    butterflyImageThree,
+    butterflyImageFour
+];
+
+let flash = function() {
+    butterflyImageOne.style.backgroundColor = "#00FF00";
+    butterflyImageTwo.style.backgroundColor = "#800000";
+    butterflyImageThree.style.backgroundColor = "#FFFF00";
+    butterflyImageFour.style.backgroundColor = "#0000FF";
+};
+
+async function getRandomButterfly() {
+    return randomButterfly [parseInt(Math.random()*randomButterfly.length)];
+}
+
+getRandomButterfly().then(flash());
+
+console.log(randomButterfly)
+
 let level = 0;
 let win = false;
+let compTurn = true;
 
 function clearColor() {
-    butterflyImageOne.style.backgroundColor = none;
-    butterflyImageTwo.style.backgroundColor = none;
-    butterflyImageThree.style.backgroundColor = none;
-    butterflyImageFour.style.backgroundColor = none;
+    butterflyImageOne.style.backgroundColor = 'auto';
+    butterflyImageTwo.style.backgroundColor = 'auto';
+    butterflyImageThree.style.backgroundColor = 'auto';
+    butterflyImageFour.style.backgroundColor = 'auto';
 };
 
 function increaseLevel(){
     win = true;
-    level++;
+    level++; 
     clearColor();
 }
 
@@ -123,13 +147,8 @@ function startGame() {
     document.getElementById('level').innerHTML="Level 1";
 }
 
-function compTurn() {
-    if (level=1){
-        //temporarily flash colors of butterfly
-    }
+function playGame() {
+    compTurn = true;
 }
 
-function yourTurn() {
-
-}
 
