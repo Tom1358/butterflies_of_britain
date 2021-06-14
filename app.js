@@ -74,41 +74,36 @@ randomButterflyImageThree();
 randomButterflyImageFour();
 
 // Variables used in game
-let level = 0;
+let level = 5;
 let win = false;
-let compTurn = true;
 let compSequence = [];
-
-
-// Click start button to play game
-document.getElementById('play-game').addEventListener('click', () => {startGame();});
 
 // Butterfly images to flash for half a second
 function butterflyOne() {
-    butterflyImageOne.style.backgroundColor = "#00FF00";
+    butterflyImageOne.style.backgroundColor = '#00FF00';
     setTimeout(function () {
-        butterflyImageOne.style.backgroundColor = "rgba(0,0,0,.0)";
+        butterflyImageOne.style.backgroundColor = 'rgba(0,0,0,.0)';
     }, 500);
 };
 
 function butterflyTwo() {
-    butterflyImageTwo.style.backgroundColor = "#800000";;
+    butterflyImageTwo.style.backgroundColor = '#800000';;
     setTimeout(function () {
-        butterflyImageTwo.style.backgroundColor = "rgba(0,0,0,.0)";
+        butterflyImageTwo.style.backgroundColor = 'rgba(0,0,0,.0)';
     }, 500);
 };
 
 function butterflyThree() {
-    butterflyImageThree.style.backgroundColor = "#FFFF00";
+    butterflyImageThree.style.backgroundColor = '#FFFF00';
     setTimeout(function () {
-        butterflyImageThree.style.backgroundColor = "rgba(0,0,0,.0)";
+        butterflyImageThree.style.backgroundColor = 'rgba(0,0,0,.0)';
     }, 500);
 };
 
 function butterflyFour() {
-    butterflyImageFour.style.backgroundColor = "#0000FF";
+    butterflyImageFour.style.backgroundColor = '#0000FF';
     setTimeout(function () {
-        butterflyImageFour.style.backgroundColor = "rgba(0,0,0,.0)";
+        butterflyImageFour.style.backgroundColor = 'rgba(0,0,0,.0)';
     }, 500);
 };
 
@@ -125,9 +120,20 @@ function clearColor() {
     butterflyImageFour.style.backgroundColor = 'rgba(0,0,0,.0)';
 };
 
+// Click start button to play game
+document.getElementById('play-game').addEventListener('click', () => {startGame();});
+
 function startGame() {
-    level=1;
     $('#level').text('Level'+' '+level);
+    clearColor();
 }
 
+// a randomly generated series of numbers
+function compTurn() {
+    for (i=0; i<level; i++) {
+        compSequence.push(Math.floor(Math.random()*4)+1);
+    }
+};
 
+compTurn();
+console.log(compSequence);
