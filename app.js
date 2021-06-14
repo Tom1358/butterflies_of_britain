@@ -127,7 +127,7 @@ function clearColor() {
 
 function startGame() {
     level=1;
-    document.getElementById('level').innerHTML="Level 1";
+    $('#level').text('Level'+' '+level);
 }
 
 
