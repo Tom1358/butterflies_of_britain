@@ -73,82 +73,61 @@ randomButterflyImageTwo();
 randomButterflyImageThree();
 randomButterflyImageFour();
 
-// click functions to confirm functionality, and change background color of butterfly images
-butterflyImageOne.addEventListener('click', myFunction);
-butterflyImageTwo.addEventListener('click', myFunctionTwo);
-butterflyImageThree.addEventListener('click', myFunctionThree);
-butterflyImageFour.addEventListener('click', myFunctionFour);
-
-function myFunction() {
-    console.log("Holy sh*t!");
-    butterflyImageOne.style.backgroundColor = "#00FF00";
-}
-
-function myFunctionTwo() {
-    console.log("And again!");
-    butterflyImageTwo.style.backgroundColor = "#800000";
-}
-
-function myFunctionThree() {
-    console.log("It works!");
-    butterflyImageThree.style.backgroundColor = "#FFFF00";
-}
-
-function myFunctionFour() {
-    console.log("I'm programming!");
-    butterflyImageFour.style.backgroundColor = "#0000FF";
-}
-
-// Click start button to play game - n.b. for now just console.log to confirm working
-document.getElementById('play-game').addEventListener('click', (event) => {startGame();}); // or could be '...'click, function() {startGame()...}
-
-// Gets random butterfly image
-let randomButterfly = [
-    butterflyImageOne,
-    butterflyImageTwo,
-    butterflyImageThree,
-    butterflyImageFour
-];
-
-let flash = function() {
-    butterflyImageOne.style.backgroundColor = "#00FF00";
-    butterflyImageTwo.style.backgroundColor = "#800000";
-    butterflyImageThree.style.backgroundColor = "#FFFF00";
-    butterflyImageFour.style.backgroundColor = "#0000FF";
-};
-
-async function getRandomButterfly() {
-    return randomButterfly [parseInt(Math.random()*randomButterfly.length)];
-}
-
-getRandomButterfly().then(flash());
-
-console.log(randomButterfly)
-
+// Variables used in game
 let level = 0;
 let win = false;
 let compTurn = true;
+let compSequence = [];
 
-function clearColor() {
-    butterflyImageOne.style.backgroundColor = 'auto';
-    butterflyImageTwo.style.backgroundColor = 'auto';
-    butterflyImageThree.style.backgroundColor = 'auto';
-    butterflyImageFour.style.backgroundColor = 'auto';
+
+// Click start button to play game
+document.getElementById('play-game').addEventListener('click', () => {startGame();});
+
+// Butterfly images to flash for half a second
+function butterflyOne() {
+    butterflyImageOne.style.backgroundColor = "#00FF00";
+    setTimeout(function () {
+        butterflyImageOne.style.backgroundColor = "rgba(0,0,0,.0)";
+    }, 500);
 };
 
-function increaseLevel(){
-    win = true;
-    level++; 
-    clearColor();
-}
+function butterflyTwo() {
+    butterflyImageTwo.style.backgroundColor = "#800000";;
+    setTimeout(function () {
+        butterflyImageTwo.style.backgroundColor = "rgba(0,0,0,.0)";
+    }, 500);
+};
+
+function butterflyThree() {
+    butterflyImageThree.style.backgroundColor = "#FFFF00";
+    setTimeout(function () {
+        butterflyImageThree.style.backgroundColor = "rgba(0,0,0,.0)";
+    }, 500);
+};
+
+function butterflyFour() {
+    butterflyImageFour.style.backgroundColor = "#0000FF";
+    setTimeout(function () {
+        butterflyImageFour.style.backgroundColor = "rgba(0,0,0,.0)";
+    }, 500);
+};
+
+// click functions to confirm functionality, and change background color of butterfly images
+butterflyImageOne.addEventListener('click', butterflyOne);
+butterflyImageTwo.addEventListener('click', butterflyTwo);
+butterflyImageThree.addEventListener('click', butterflyThree);
+butterflyImageFour.addEventListener('click', butterflyFour);
+
+function clearColor() {
+    butterflyImageOne.style.backgroundColor = 'rgba(0,0,0,.0)';
+    butterflyImageTwo.style.backgroundColor = 'rgba(0,0,0,.0)';
+    butterflyImageThree.style.backgroundColor = 'rgba(0,0,0,.0)';
+    butterflyImageFour.style.backgroundColor = 'rgba(0,0,0,.0)';
+};
 
 function startGame() {
     level=1;
     document.getElementById('level').innerHTML="Level 1";
-}
-
-function playGame() {
-    compTurn = true;
 }
 
 
