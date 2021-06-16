@@ -39,25 +39,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Variables used in game
     let level = 8;
-    let round = 5
+    let round = 7
     let win = false;
     let roundOrder = [];
 
     // random number pushed into the 'round order' array
     function compTurn() {
         $('#level').text('Level'+' '+level);
+        for (i = 0; i < round; i++) {
+            roundOrder.push(Math.floor(Math.random()*4)+1);
+            };
         setTimeout(function() {
-            for (i = 0; i < round; i++) {
-                roundOrder.push(Math.floor(Math.random()*4)+1);
-            }
             for (i = 0; i < roundOrder.length; i++) {
                 butterflyFlash(i);
             }
-        }, 1000);
+        }, 500);
     } 
+    console.log(roundOrder)
 
-
-    // access each value in the 'round order' array, add a delay, and change the color of the background
+    // access each value in the 'round order' array, add a delay, and change the color of the background -n.b. https://stackoverflow.com/questions/37497872/how-to-save-clear-settimeouts-array-using-loops-index (was used to solve issue of everything flashing at once)
     function butterflyFlash(i) {
         setTimeout (function() {
             if (roundOrder[i] === 1) {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     butterflyFour();
                 }
-        }, 1000)
+        }, 1000 * i)
     };
 
     compTurn();
