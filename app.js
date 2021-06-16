@@ -38,9 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
     randomButterflyImage();
 
     // Variables used in game
-    let level = 8;
-    let round = 7
-    let win = false;
+    let level = 0;
+    let round = 1
     let roundOrder = [];
 
     // random number pushed into the 'round order' array
@@ -71,8 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
         }, 1000 * i)
     };
-
-    compTurn();
 
     // Butterfly images to flash for half a second
     function butterflyOne() {
@@ -120,7 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('play-game').addEventListener('click', () => {startGame();});
 
     function startGame() {
-        
+        level++;
+        compTurn();
         clearColor();
     }
 
