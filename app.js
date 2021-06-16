@@ -26,7 +26,7 @@ function randomButterflyImage() {
         butterflyImageFour.src ='assets/images/comma.jpg';
     } else {
         butterflyImageOne.src ='assets/images/dark_green_fritillary.jpg';
-        butterflyImageTwo.src ='assets/images/marbled_white';
+        butterflyImageTwo.src ='assets/images/marbled_white.jpg';
         butterflyImageThree.src ='assets/images/comma.jpg';
         butterflyImageFour.src ='assets/images/brown_argus.jpg';
     };
@@ -36,12 +36,9 @@ function randomButterflyImage() {
 randomButterflyImage();
 
 // Variables used in game
-let level = 1;
+let level = 8;
 let win = false;
-let round = [];
-
 let roundLength = [];
-for (i=0; i<level.)
 
 // Butterfly images to flash for half a second
 function butterflyOne() {
@@ -72,6 +69,32 @@ function butterflyFour() {
     }, 500);
 };
 
+// Number of flashes per level - 'round length'
+for (let i = 0; i < level; i++) {
+    roundLength.push([i]);
+};
+
+// the order that they will flash in - the 'round order'
+let roundOrder = Math.floor(Math.random()*4)+1;
+console.log(roundOrder);
+
+// the computer's turn
+function compTurn() {
+    for (i = 0; i < roundLength.length; i++) {
+        if (roundOrder === 1) {
+            setTimeout (butterflyOne(), 1000)
+        } else if (roundOrder === 2) {
+            setTimeout (butterflyTwo(), 1000)
+        } else if (roundOrder === 3) {
+            setTimeout (butterflyThree(), 1000)
+        } else {
+            setTimeout (butterflyFour(), 1000)
+        }
+    }
+}
+
+compTurn();
+
 // click functions to confirm functionality, and change background color of butterfly images
 butterflyImageOne.addEventListener('click', butterflyOne);
 butterflyImageTwo.addEventListener('click', butterflyTwo);
@@ -92,13 +115,3 @@ function startGame() {
     $('#level').text('Level'+' '+level);
     clearColor();
 }
-
-// a randomly generated series of numbers
-function compTurn() {
-    for (i=0; i<level; i++) {
-        compSequence.push(Math.floor(Math.random()*4)+1);
-    }
-};
-
-compTurn();
-console.log(compSequence);
