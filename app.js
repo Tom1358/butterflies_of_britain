@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() { 
 
+    document.getElementById('play-game').style.cursor = 'pointer';
+
     // define butterfly images in game
     const butterflyImageOne = document.getElementById("butterfly_image_one");
     const butterflyImageTwo = document.getElementById("butterfly_image_two");
@@ -41,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let level = 0;
     let round = 1
     let roundOrder = [];
+    let playerOrder = [];
 
     // random number pushed into the 'round order' array
     function compTurn() {
@@ -61,16 +64,21 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout (function() {
             if (roundOrder[i] === 1) {
                     butterflyOne();
+                    playerOrder.push(i);
                 } else if (roundOrder[i] === 2) {
                     butterflyTwo();
+                    playerOrder.push(i);
                 } else if (roundOrder[i] === 3) {
                     butterflyThree();
+                    playerOrder.push(i);
                 } else {
                     butterflyFour();
+                    playerOrder.push(i);
                 }
-        }, 1000 * i)
+        }, 1000 * i);
     };
-
+console.log(playerOrder.length)
+console.log(roundOrder.length)
     // Butterfly images to flash for half a second
     function butterflyOne() {
         butterflyImageOne.style.backgroundColor = '#00FF00';
@@ -122,5 +130,13 @@ document.addEventListener('DOMContentLoaded', function() {
         clearColor();
         document.getElementById('play-game').style.display='none';
     }
+
+    function playerTurn() {
+        document.getElementsByClassName('butterflies').style.cursor = 'pointer';
+        console.log("yes!")
+    }
+
+
+
 
 })
