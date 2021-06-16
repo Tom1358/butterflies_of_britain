@@ -120,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         level++;
         compTurn();
         clearColor();
+        document.getElementById('play-game').style.display='none';
     }
 
 })
