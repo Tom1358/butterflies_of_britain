@@ -42,10 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Variables used in game
     let level = 0;
-    let round = 3;
+    let round = 1;
     let roundOrder = [];
     let runningSequence = [];
     let playerOrder = [];
+    let counter = 0;
 
     // random number pushed into the 'round order' array
     function compTurn() {
@@ -129,24 +130,26 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     function playerTurn() {
-        $('.butterflies').css("cursor", "pointer");
-        $('.butterflies').on('click', () => {setTimeout ( () => {$('.butterflies').css("cursor", ""); compareOrders();}), 600});
-        butterflyImageOne.addEventListener('click', butterflyOne);
-        butterflyImageTwo.addEventListener('click', butterflyTwo);
-        butterflyImageThree.addEventListener('click', butterflyThree);
-        butterflyImageFour.addEventListener('click', butterflyFour);
+            $('.butterflies').css("cursor", "pointer");
+            $('.butterflies').on('click', () => {setTimeout ( () => {$('.butterflies').css("cursor", ""); compareOrders();}), 600});
+            butterflyImageOne.addEventListener('click', butterflyOne);
+            butterflyImageTwo.addEventListener('click', butterflyTwo);
+            butterflyImageThree.addEventListener('click', butterflyThree);
+            butterflyImageFour.addEventListener('click', butterflyFour);
         setTimeout(function() {
             document.getElementById('play-game').style.display='';
-        })
+        }, 1000)
     };
 
     function compareOrders() {
-        if (playerOrder === roundOrder) {
+        if (playerOrder[counter] === roundOrder[counter]) {
             alert('nice!');
-            } else {
-            alert('oh dear...');
-            };
+        } else {
+            playerTurn();
+            counter++;
         };
+    };
+
 
     // Click start button to play game
     document.getElementById('play-game').addEventListener('click', () => {startGame();});
