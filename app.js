@@ -129,7 +129,8 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     function playerTurn() {
-        $(".butterflies").css("cursor", "pointer");
+        $('.butterflies').css("cursor", "pointer");
+        $('.butterflies').on('click', () => {setTimeout ( () => {$('.butterflies').css("cursor", ""); compareOrders();}), 600});
         butterflyImageOne.addEventListener('click', butterflyOne);
         butterflyImageTwo.addEventListener('click', butterflyTwo);
         butterflyImageThree.addEventListener('click', butterflyThree);
@@ -139,9 +140,13 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     };
 
-    //function compareOrders() {
-     //   if ()
-    //}
+    function compareOrders() {
+        if (playerOrder === roundOrder) {
+            alert('nice!');
+            } else {
+            alert('oh dear...');
+            };
+        };
 
     // Click start button to play game
     document.getElementById('play-game').addEventListener('click', () => {startGame();});
