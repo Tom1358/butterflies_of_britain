@@ -172,7 +172,7 @@
     margin-right: auto;
     }
 
-#butterfly_image_one {
+.butterflies {
     height: 200px;
     width: 200px;
     display: block;
@@ -181,41 +181,7 @@
     box-shadow: 0 0 15px 0;
     margin-left: auto;
     margin-right: auto;
-    }
-
-#butterfly_image_two {
-    height: 200px;
-    width: 200px;
-    display: block;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 0 15px 0;
-    margin-left: auto;
-    margin-right: auto;
-    }
-
-#butterfly_image_three {
-    height: 200px;
-    width: 200px;
-    display: block;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 0 15px 0;
-    margin-left: auto;
-    margin-right: auto;
-    }
-
-#butterfly_image_four {
-    height: 200px;
-    width: 200px;
-    display: block;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 0 15px 0;
-    margin-left: auto;
-    margin-right: auto;
-    }
-
+}
 
 @media only screen and (max-width: 968px) {
     .image {

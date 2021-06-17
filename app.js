@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('play-game').style.cursor = 'pointer';
 
     // define butterfly images in game
+    const butterflies = document.getElementsByClassName('butterflies');
     const butterflyImageOne = document.getElementById("butterfly_image_one");
     const butterflyImageTwo = document.getElementById("butterfly_image_two");
     const butterflyImageThree = document.getElementById("butterfly_image_three");
@@ -41,8 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Variables used in game
     let level = 0;
-    let round = 1
+    let round = 3;
     let roundOrder = [];
+    let runningSequence = [];
     let playerOrder = [];
 
     // random number pushed into the 'round order' array
@@ -57,38 +59,44 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 500);
     } 
-    console.log(roundOrder)
 
     // access each value in the 'round order' array, add a delay, and change the color of the background -n.b. https://stackoverflow.com/questions/37497872/how-to-save-clear-settimeouts-array-using-loops-index (was used to solve issue of everything flashing at once)
     function butterflyFlash(i) {
         setTimeout (function() {
             if (roundOrder[i] === 1) {
+                    runningSequence.push(i);
                     butterflyOne();
-                    playerOrder.push(i);
-                } else if (roundOrder[i] === 2) {
+                } if (roundOrder[i] === 2) {
+                    runningSequence.push(i);
                     butterflyTwo();
-                    playerOrder.push(i);
-                } else if (roundOrder[i] === 3) {
+                } if (roundOrder[i] === 3) {
+                    runningSequence.push(i);
                     butterflyThree();
-                    playerOrder.push(i);
-                } else {
+                } if (roundOrder[i] === 4) {
+                    runningSequence.push(i);
                     butterflyFour();
-                    playerOrder.push(i);
-                }
+                };
+                if (runningSequence.length === roundOrder.length) {
+                    setTimeout (function() {
+                        playerTurn();
+                    }, 1200);
+                };   
         }, 1000 * i);
     };
-console.log(playerOrder.length)
-console.log(roundOrder.length)
+
+
     // Butterfly images to flash for half a second
     function butterflyOne() {
         butterflyImageOne.style.backgroundColor = '#00FF00';
+        playerOrder.push[1];
         setTimeout(function () {
-            butterflyImageOne.style.backgroundColor = 'rgba(0,0,0,.0)';
+        butterflyImageOne.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 500);
     };
 
     function butterflyTwo() {
-        butterflyImageTwo.style.backgroundColor = '#800000';;
+        butterflyImageTwo.style.backgroundColor = '#800000';
+        playerOrder.push[2];
         setTimeout(function () {
             butterflyImageTwo.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 500);
@@ -96,6 +104,7 @@ console.log(roundOrder.length)
 
     function butterflyThree() {
         butterflyImageThree.style.backgroundColor = '#FFFF00';
+        playerOrder.push[3];
         setTimeout(function () {
             butterflyImageThree.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 500);
@@ -103,16 +112,14 @@ console.log(roundOrder.length)
 
     function butterflyFour() {
         butterflyImageFour.style.backgroundColor = '#0000FF';
+        playerOrder.push[4];
         setTimeout(function () {
             butterflyImageFour.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 500);
     };
 
     // click functions to confirm functionality, and change background color of butterfly images
-    butterflyImageOne.addEventListener('click', butterflyOne);
-    butterflyImageTwo.addEventListener('click', butterflyTwo);
-    butterflyImageThree.addEventListener('click', butterflyThree);
-    butterflyImageFour.addEventListener('click', butterflyFour);
+    
 
     function clearColor() {
         butterflyImageOne.style.backgroundColor = 'rgba(0,0,0,.0)';
@@ -120,6 +127,21 @@ console.log(roundOrder.length)
         butterflyImageThree.style.backgroundColor = 'rgba(0,0,0,.0)';
         butterflyImageFour.style.backgroundColor = 'rgba(0,0,0,.0)';
     };
+
+    function playerTurn() {
+        $(".butterflies").css("cursor", "pointer");
+        butterflyImageOne.addEventListener('click', butterflyOne);
+        butterflyImageTwo.addEventListener('click', butterflyTwo);
+        butterflyImageThree.addEventListener('click', butterflyThree);
+        butterflyImageFour.addEventListener('click', butterflyFour);
+        setTimeout(function() {
+            document.getElementById('play-game').style.display='';
+        })
+    };
+
+    //function compareOrders() {
+     //   if ()
+    //}
 
     // Click start button to play game
     document.getElementById('play-game').addEventListener('click', () => {startGame();});
@@ -131,12 +153,11 @@ console.log(roundOrder.length)
         document.getElementById('play-game').style.display='none';
     }
 
-    function playerTurn() {
-        document.getElementsByClassName('butterflies').style.cursor = 'pointer';
-        console.log("yes!")
-    }
+    
+    
+        
+       
 
-
-
+    
 
 })
