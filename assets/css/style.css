@@ -136,9 +136,11 @@
 
 #table_for_images {
     background-color: green;
+    place-items: center;
     grid-column-start: sidebar;
     grid-column-end: main;
     display: grid;
+    justify-content: center;
     grid-template-columns: 250px 250px 250px 250px;
     grid-template-rows: 250px 250px 250px 250px;;
     grid-template-areas: "one two three four"
@@ -180,8 +182,18 @@
     }
 }
 
-.butterflies {
+.butterflies_text{
+    text-align: center;
+}
 
+.butterflies_info {
+    height: 200px;
+    width: 200px;
+    display: block;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 0;
+    margin-top: 10px;
 }
 
 #image_one {
@@ -206,6 +218,25 @@
 
 #image_six {
     grid-area: six;
+}
+
+@media only screen and (max-width: 576px) {
+    .butterflies_info {
+        height: 150px;
+        width: 150px;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .butterflies_info {
+        height: 120px;
+        width: 120px;
+        display: block;
+        padding: 5px;
+        border-radius: 50%;
+        box-shadow: 0 0 15px 0;
+    }
 }
 
 /*-----------------------------instructions.html-------------------------------------*/
