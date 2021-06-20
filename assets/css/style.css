@@ -152,7 +152,7 @@
     background-color: blue;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
     #table_for_images {
         background-color: green;
         grid-column-start: sidebar;
@@ -160,8 +160,23 @@
         display: grid;
         grid-template-columns: 200px 200px;
         grid-template-rows: auto auto;
+        grid-template-areas:    "one two three" 
+                                "four five six"
+                                "seven eight nine";
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #table_for_images {
+        background-color: green;
+        grid-column-start: sidebar;
+        grid-column-end: main;
+        display: grid;
+        grid-template-columns: 150px 150px;
+        grid-template-rows: auto auto;
         grid-template-areas:    "one two" 
-                                "three four";
+                                "three four"
+                                "five six";
     }
 }
 
