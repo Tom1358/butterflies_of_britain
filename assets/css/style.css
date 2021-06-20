@@ -180,6 +180,34 @@
     }
 }
 
+.butterflies {
+
+}
+
+#image_one {
+    grid-area: one;
+}
+
+#image_two {
+    grid-area: two;
+}
+
+#image_three {
+    grid-area: three;
+}
+
+#image_four {
+    grid-area: four;
+}
+
+#image_five {
+    grid-area: five;
+}
+
+#image_six {
+    grid-area: six;
+}
+
 /*-----------------------------instructions.html-------------------------------------*/
 
 #instructions {
