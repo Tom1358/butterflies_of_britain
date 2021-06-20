@@ -136,6 +136,44 @@
     }
 }
 
+/*-----------------------------instructions.html-------------------------------------*/
+
+#instructions {
+    grid-area: main;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    height: auto;
+    color: white;
+}
+
+#instructions h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#instructions li {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 576px) {
+    #instructions {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    #instructions h1 {
+        font-size: 6vw;
+    }
+    
+    #instructions li {
+        font-size: 4vw;
+    }
+}
+
 /*-----------------------------game.html-------------------------------------*/
 
 .background-image { 
