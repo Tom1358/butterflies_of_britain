@@ -262,17 +262,6 @@
     margin-right: auto;
 }
 
-.image {
-    height: 200px;
-    width: 200px;
-    display: block;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 0 15px 0;
-    margin-left: auto;
-    margin-right: auto;
-    }
-
 .butterflies {
     height: 200px;
     width: 200px;
@@ -290,18 +279,33 @@
 }
 
 @media only screen and (max-width: 968px) {
-    .image {
+    .butterflies {
         height: 180px;
         width: 180px;
     }
 }
 
 @media only screen and (max-width: 720px) {
-    .image {
+    .butterflies {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .butterflies {
         height: 120px;
         width: 120px;
     }
 }
+
+@media only screen and (max-width: 290px) {
+    .butterflies {
+        height: 100px;
+        width: 100px;
+    }
+}
+
 
 .game-controls {
     display: flex;
