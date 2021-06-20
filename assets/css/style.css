@@ -3,11 +3,10 @@
 .container-for-grid {
     display: grid;
     grid-template-columns: 25% 75%;
-    grid-template-rows: 40vh 80% 60px;
+    grid-template-rows: 40vh 80%;
     grid-template-areas: 
         "header header"
         "sidebar main"
-        "footer footer"
     ;
 }
 
@@ -83,10 +82,10 @@
 .butterfly-banner {
         grid-area: header;
         background: url("/assets/images/butterfly_banner.jpg") no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%;
 }
 
 /*-----------------------------index.html-------------------------------------*/
@@ -136,6 +135,39 @@
     }
 }
 
+/*-----------------------------butterflies_of_britain.html-------------------------------------*/
+
+#table_for_images {
+    background-color: green;
+    grid-column-start: sidebar;
+    grid-column-end: main;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 250px 250px 250px 250px;;
+    grid-template-areas: "one two three four"
+                        "five six seven eight"
+                        "nine ten eleven twelve"
+                        "thirteen fourteen fifteen sixteen";
+}
+
+#random_image {
+    grid-area: eight;
+    background-color: blue;
+}
+
+@media only screen and (max-width: 576px) {
+    #table_for_images {
+        background-color: green;
+        grid-column-start: sidebar;
+        grid-column-end: main;
+        display: grid;
+        grid-template-columns: 200px 200px;
+        grid-template-rows: auto auto;
+        grid-template-areas:    "one two" 
+                                "three four";
+    }
+}
+
 /*-----------------------------instructions.html-------------------------------------*/
 
 #instructions {
@@ -143,7 +175,7 @@
     margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10vh;
+    margin-top: 5vh;
     padding-left: 15vw;
     padding-right: 15vw;
     height: auto;
@@ -163,31 +195,49 @@
     font-size: 16px;
 }
 
+#game-link {
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    margin-top: 10px;
+    padding: 10px;
+    width: 20vw;
+    background-color: lightgrey;
+    color: black;
+}
+
 @media only screen and (max-width: 576px) {
+
     #instructions {
         padding-left: 10vw;
         padding-right: 10vw;
     }
 
     #instructions h1 {
-        font-size: 6vw;
+        font-size: 24px;
     }
     
     #instructions li {
-        font-size: 4vw;
+        font-size: 16px;
+    }
+
+    #game-link {
+        width: 40vw;
+        padding: 3px;
     }
 }
 
-#game-link {
-    position: absolute;
-    background-color: black;
-    color: white;
-    left: 50%;
-    -ms-transform: translate(-50%);
-    transform: translate(-50%);
-    margin-top: 20px;
-    padding: 10px;
-    width: 20%
+@media only screen and (max-width: 380px) {
+
+    #instructions li {
+        font-size: 12px;
+    }
+
+    #game-link {
+        width: 40vw;
+        padding: 3px;
+    }
 }
 
 /*-----------------------------game.html-------------------------------------*/
@@ -195,10 +245,8 @@
 .background-image { 
     background: url("/assets/images/meadow.jpg") no-repeat center center fixed; 
     height: 100vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
   }
 
 .image-div {
@@ -260,4 +308,16 @@
     justify-content: center;
     color: white;
     font-size: x-large;
+}
+
+#play-game {
+    cursor: pointer;
+}
+
+#audio {
+    border-radius: 50%;
+}
+
+#mute {
+    border-radius: 50%;
 }
