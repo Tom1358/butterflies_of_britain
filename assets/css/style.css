@@ -155,6 +155,10 @@
     font-size: 30px;
 }
 
+#instructions p {
+    position: relative;
+}
+
 #instructions li {
     font-size: 16px;
 }
@@ -172,6 +176,18 @@
     #instructions li {
         font-size: 4vw;
     }
+}
+
+#game-link {
+    position: absolute;
+    background-color: black;
+    color: white;
+    left: 50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    margin-top: 20px;
+    padding: 10px;
+    width: 20%
 }
 
 /*-----------------------------game.html-------------------------------------*/
