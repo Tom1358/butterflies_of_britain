@@ -1,13 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() { 
 
-    document.getElementById('play-game').style.cursor = 'pointer';
-
     // define butterfly images in game
     const butterflies = document.getElementsByClassName('butterflies');
     const butterflyImageOne = document.getElementById("butterfly_image_one");
     const butterflyImageTwo = document.getElementById("butterfly_image_two");
     const butterflyImageThree = document.getElementById("butterfly_image_three");
     const butterflyImageFour = document.getElementById("butterfly_image_four");
+
+    document.getElementById('audio').addEventListener('click', volumeOn);
+
+    function volumeOn() {
+        document.getElementById('mute').classList.remove('hide-button');
+        document.getElementById('audio').classList.add('hide-button');
+        let audio = document.getElementsByTagName('audio');
+        let i;
+        for (i=0; i<audio.length; i++) {
+            audio[i].muted=false;
+        };
+        console.log('vol on');
+    };
+    
+    document.getElementById('mute').addEventListener('click', volumeOff);
+
+    function volumeOff() {
+        document.getElementById('audio').classList.remove('hide-button');
+        document.getElementById('mute').classList.add('hide-button');
+        let audio = document.getElementsByTagName('audio');
+        let i;
+        for (i=0; i<audio.length; i++) {
+            audio[i].muted=true;
+        };
+        console.log('vol off');
+    };
 
     // RANDOM BUTTERFLY IMAGE STEP ONE: create random numbers
     let randomNum = Math.floor(Math.random()*4)+1;
@@ -47,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let runningSequence = [];
     let playerOrder = [];
     let counter = 0;
+    
 
     // random number pushed into the 'round order' array
     function compTurn() {
@@ -58,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
             for (i = 0; i < roundOrder.length; i++) {
                 butterflyFlash(i);
             }
-        }, 500);
+        }, 700);
     } 
 
     // access each value in the 'round order' array, add a delay, and change the color of the background -n.b. https://stackoverflow.com/questions/37497872/how-to-save-clear-settimeouts-array-using-loops-index (was used to solve issue of everything flashing at once)
@@ -85,38 +110,45 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000 * i);
     };
 
-
     // Butterfly images to flash for half a second
     function butterflyOne() {
         butterflyImageOne.style.backgroundColor = '#00FF00';
+        let audio = document.getElementById('sound-one');
+        audio.play();
         playerOrder.push[1];
         setTimeout(function () {
         butterflyImageOne.style.backgroundColor = 'rgba(0,0,0,.0)';
-        }, 500);
+        }, 700);
     };
 
     function butterflyTwo() {
         butterflyImageTwo.style.backgroundColor = '#800000';
+        let audio = document.getElementById('sound-two');
+        audio.play();
         playerOrder.push[2];
         setTimeout(function () {
             butterflyImageTwo.style.backgroundColor = 'rgba(0,0,0,.0)';
-        }, 500);
+        }, 700);
     };
 
     function butterflyThree() {
         butterflyImageThree.style.backgroundColor = '#FFFF00';
+        let audio = document.getElementById('sound-three');
+        audio.play();
         playerOrder.push[3];
         setTimeout(function () {
             butterflyImageThree.style.backgroundColor = 'rgba(0,0,0,.0)';
-        }, 500);
+        }, 700);
     };
 
     function butterflyFour() {
         butterflyImageFour.style.backgroundColor = '#0000FF';
+        let audio = document.getElementById('sound-four');
+        audio.play();
         playerOrder.push[4];
         setTimeout(function () {
             butterflyImageFour.style.backgroundColor = 'rgba(0,0,0,.0)';
-        }, 500);
+        }, 700);
     };
 
     // click functions to confirm functionality, and change background color of butterfly images

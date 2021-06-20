@@ -49,13 +49,13 @@
     <!-- four circular images of butterflies-->
     <div class="container image-div">
       <div class="row">
-        <div class="col-6"><img class="butterflies" id="butterfly_image_one" src="assets/images/brown_argus.jpg" alt="a Brown Argus butterfly"></div>
-        <div class="col-6"><img class="butterflies" id="butterfly_image_two" src="assets/images/comma.jpg" alt="a Comma butterfly"></div>
+        <div class="col-6"><img class="butterflies" id="butterfly_image_one" src="assets/images/brown_argus.jpg" alt="a Brown Argus butterfly"><audio id="sound-one" src="assets/sounds/sound_one.mp3"></audio></div>
+        <div class="col-6"><img class="butterflies" id="butterfly_image_two" src="assets/images/comma.jpg" alt="a Comma butterfly"> <audio id="sound-two" src="assets/sounds/sound_two.mp3"></audio></div>
       </div>
       <div class="row"></div>
       <div class="row">
-        <div class="col-6"><img class="butterflies" id="butterfly_image_three" src="assets/images/dark_green_fritillary.jpg" alt="a Dark Green Fritillary butterfly"></div>
-        <div class="col-6"><img class="butterflies" id="butterfly_image_four" src="assets/images/marbled_white.jpg" alt="a Marbled White butterfly"></div>
+        <div class="col-6"><img class="butterflies" id="butterfly_image_three" src="assets/images/dark_green_fritillary.jpg" alt="a Dark Green Fritillary butterfly"><audio id="sound-three" src="assets/sounds/sound_three.mp3"></audio></div>
+        <div class="col-6"><img class="butterflies" id="butterfly_image_four" src="assets/images/marbled_white.jpg" alt="a Marbled White butterfly"><audio id="sound-four" src="assets/sounds/sound_four.mp3"></audio></div>
       </div>
       <!-- game controls - start, audio, level-->
       <div class="row">
@@ -66,7 +66,10 @@
           <span class="game-controls"><p id="level"></p></span>
         </div>
         <div class="col-4">
-          <span class="game-controls"><i class="fas fa-volume-up volume"></i><i class="fas fa-volume-mute volume"></i></span>
+          <span class="game-controls">
+              <button id="audio"><i class = "fas fa-volume-up"></i></button>
+              <button id="mute" class="hide-button"><i class = "fas fa-volume-mute"></i></button>
+          </span>
         </div>
       </div>
     </div>
