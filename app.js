@@ -193,12 +193,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (firstArray !== secondArray) { // if the array is not the same, player loses
             $('#level').text('incorrect butterfly...');
             setTimeout(function() {
-                $('#play-game').css.visibility='visible';
+                document.getElementById('play-game').style.visibility='visible';
                 console.log('fail');
             }, 500);
         } else {
             if (roundOrder.length === playerOrder.length) { // if the player is correct, and the arrays are the same length, the next round begins
-                //$('#level').text('well done!'); 
+                $('#level').text('well done!'); 
                 level++;
                 compTurn()
             } else { // the player's turn continues
