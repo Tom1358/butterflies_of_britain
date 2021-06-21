@@ -66,32 +66,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Variables used in game
     let level = 0;
-    let round = 1;
     let roundOrder = [];
     let runningSequence = [];
     let playerOrder = [];
-    let counter = 0;
+    let counter=0;
 
     // ensures variables are cleared at start of game, no butterflies have any colours and start button is hidden once game starts
     function startGame() {
         level = 1;
+        counter=0;
         clearColor();
-        let roundOrder = [];
-        let runningSequence = [];
-        let playerOrder = [];
+        roundOrder = []; // the random order of butterflies that will flash each turn, incrementally increased
+        runningSequence = []; // as the butterflies flash, this array builds, until it hits the same as the 'roundOrder' array number
+        playerOrder = [];
         compTurn();
         document.getElementById('play-game').style.display='none';
+        $('#level').text('Level'+' '+level);
     }
+
+    // Click start button to play game
+    document.getElementById('play-game').addEventListener('click', () => {startGame();});
 
     // random number pushed into the 'round order' array
     function compTurn() {
-        $('#level').text('Level'+' '+level);
-        for (i = 0; i < round; i++) {
+        for (i = 0; i < level; i++) {
             roundOrder.push(Math.floor(Math.random()*4)+1);
             };
         setTimeout(function() {
             for (i = 0; i < roundOrder.length; i++) {
-                butterflyFlash(i);
+                butterflyFlash(i); // for the number of numbers in the 'round order' array, the butterflies will flash
             }
         }, 700);
     } 
@@ -121,18 +124,30 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     function playerTurn() {
-        document.getElementById('play-game').style.display='none';
+        document.getElementById('play-game').style.visibility='hidden';
         $('.butterflies').css("cursor", "pointer");
+        $('#butterfly_image_one').click(function () {
+            playerOrder.push(1);
+            butterflyOne();
+        });
+        $('#butterfly_image_two').click(function () {
+            playerOrder.push(2);
+            butterflyTwo();
+        });
+        $('#butterfly_image_three').click(function () {
+            playerOrder.push(3);
+            butterflyThree();
+        });
+        $('#butterfly_image_four').click(function () {
+            playerOrder.push(4);
+            butterflyFour();
+        });
         $('.butterflies').on('click', () => {
             setTimeout ( 
                 () => 
                 {$('.butterflies').css("cursor", ""); 
                 compareOrders();
-                }), 600});
-        butterflyImageOne.addEventListener('click', butterflyOne);
-        butterflyImageTwo.addEventListener('click', butterflyTwo);
-        butterflyImageThree.addEventListener('click', butterflyThree);
-        butterflyImageFour.addEventListener('click', butterflyFour);
+                }), 3000});
 };
 
     // Butterfly images to flash for half a second
@@ -140,7 +155,6 @@ document.addEventListener('DOMContentLoaded', function() {
         butterflyImageOne.style.backgroundColor = '#00FF00';
         let audio = document.getElementById('sound-one');
         audio.play();
-        playerOrder.push[1];
         setTimeout(function () {
         butterflyImageOne.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 700);
@@ -150,7 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
         butterflyImageTwo.style.backgroundColor = '#800000';
         let audio = document.getElementById('sound-two');
         audio.play();
-        playerOrder.push[2];
         setTimeout(function () {
             butterflyImageTwo.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 700);
@@ -160,7 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
         butterflyImageThree.style.backgroundColor = '#FFFF00';
         let audio = document.getElementById('sound-three');
         audio.play();
-        playerOrder.push[3];
         setTimeout(function () {
             butterflyImageThree.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 700);
@@ -170,14 +182,32 @@ document.addEventListener('DOMContentLoaded', function() {
         butterflyImageFour.style.backgroundColor = '#0000FF';
         let audio = document.getElementById('sound-four');
         audio.play();
-        playerOrder.push[4];
         setTimeout(function () {
             butterflyImageFour.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 700);
     };
 
-    // click functions to confirm functionality, and change background color of butterfly images
-    
+    function compareOrders() {
+        let firstArray = playerOrder.toString();
+        let secondArray = roundOrder.toString()
+        if (firstArray !== secondArray) { // if the array is not the same, player loses
+            $('#level').text('incorrect butterfly...');
+            setTimeout(function() {
+                $('#play-game').css.visibility='visible';
+                console.log('fail');
+            }, 500);
+        } else {
+            if (roundOrder.length === playerOrder.length) { // if the player is correct, and the arrays are the same length, the next round begins
+                //$('#level').text('well done!'); 
+                level++;
+                compTurn()
+            } else { // the player's turn continues
+                //$('.butterflies').css("cursor", "pointer"); 
+                //playerTurn();
+                //counter++;
+            }; 
+        };
+    }; 
 
     function clearColor() {
         butterflyImageOne.style.backgroundColor = 'rgba(0,0,0,.0)';
@@ -185,28 +215,5 @@ document.addEventListener('DOMContentLoaded', function() {
         butterflyImageThree.style.backgroundColor = 'rgba(0,0,0,.0)';
         butterflyImageFour.style.backgroundColor = 'rgba(0,0,0,.0)';
     };
-
-
-    function compareOrders() {
-        if (playerOrder[counter] === roundOrder[counter]) {
-            alert('nice!');
-        } else {
-            playerTurn();
-            counter++;
-        };
-    };
-
-
-    // Click start button to play game
-    document.getElementById('play-game').addEventListener('click', () => {startGame();});
-
-    
-
-    
-    
-        
-       
-
-    
 
 })
