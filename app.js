@@ -71,7 +71,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let runningSequence = [];
     let playerOrder = [];
     let counter = 0;
-    
+
+    // ensures variables are cleared at start of game, no butterflies have any colours and start button is hidden once game starts
+    function startGame() {
+        level = 1;
+        clearColor();
+        let roundOrder = [];
+        let runningSequence = [];
+        let playerOrder = [];
+        compTurn();
+        document.getElementById('play-game').style.display='none';
+    }
 
     // random number pushed into the 'round order' array
     function compTurn() {
@@ -109,6 +119,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 };   
         }, 1000 * i);
     };
+
+    function playerTurn() {
+        document.getElementById('play-game').style.display='none';
+        $('.butterflies').css("cursor", "pointer");
+        $('.butterflies').on('click', () => {
+            setTimeout ( 
+                () => 
+                {$('.butterflies').css("cursor", ""); 
+                compareOrders();
+                }), 600});
+        butterflyImageOne.addEventListener('click', butterflyOne);
+        butterflyImageTwo.addEventListener('click', butterflyTwo);
+        butterflyImageThree.addEventListener('click', butterflyThree);
+        butterflyImageFour.addEventListener('click', butterflyFour);
+};
 
     // Butterfly images to flash for half a second
     function butterflyOne() {
@@ -161,17 +186,6 @@ document.addEventListener('DOMContentLoaded', function() {
         butterflyImageFour.style.backgroundColor = 'rgba(0,0,0,.0)';
     };
 
-    function playerTurn() {
-            $('.butterflies').css("cursor", "pointer");
-            $('.butterflies').on('click', () => {setTimeout ( () => {$('.butterflies').css("cursor", ""); compareOrders();}), 600});
-            butterflyImageOne.addEventListener('click', butterflyOne);
-            butterflyImageTwo.addEventListener('click', butterflyTwo);
-            butterflyImageThree.addEventListener('click', butterflyThree);
-            butterflyImageFour.addEventListener('click', butterflyFour);
-        setTimeout(function() {
-            document.getElementById('play-game').style.display='';
-        }, 1000)
-    };
 
     function compareOrders() {
         if (playerOrder[counter] === roundOrder[counter]) {
@@ -186,12 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Click start button to play game
     document.getElementById('play-game').addEventListener('click', () => {startGame();});
 
-    function startGame() {
-        level++;
-        compTurn();
-        clearColor();
-        document.getElementById('play-game').style.display='none';
-    }
+    
 
     
     
