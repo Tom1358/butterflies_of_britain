@@ -221,6 +221,11 @@ document.addEventListener('DOMContentLoaded', function() {
             butterflyImageFour.style.backgroundColor = '#0000FF';
             setTimeout( function() {
                 clearColor();
+                roundOrder = [];
+                runningSequence = [];
+                playerOrder = [];
+                firstArray = [];
+                secondArray = [];
                 setTimeout(baseScreen(), 800);
             }, 400);
         }
