@@ -71,8 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let playerOrder = [];
     let counter=0;
     let good = false;
+    let win = false;
 
-    function baseScreen() {
+    function tryAgain() {
         level = 0;
         roundOrder = [];
         runningSequence = [];
@@ -211,7 +212,18 @@ document.addEventListener('DOMContentLoaded', function() {
         let secondArray = roundOrder.toString();
         if (firstArray != secondArray) {
             good = false;
+        } else if (firstArray == secondArray && !win) {
+            $('#level').text('Well done, keep it up!');
+            level++;
+            setTimeout( function() {
+                clearColor();
+                firstArray = [];
+                secondArray = [];
+                setTimeout(compTurn(), 800);
+            }, 400);
         }
+
+        
 
         if (good === false) {
             $('#level').text('Wrong butterfly...');
@@ -221,22 +233,21 @@ document.addEventListener('DOMContentLoaded', function() {
             butterflyImageFour.style.backgroundColor = '#0000FF';
             setTimeout( function() {
                 clearColor();
-                roundOrder = [];
-                runningSequence = [];
-                playerOrder = [];
                 firstArray = [];
                 secondArray = [];
-                setTimeout(baseScreen(), 800);
+                setTimeout(tryAgain(), 800);
             }, 400);
         }
 
         if (playerOrder.length == 10 && good) {
             winGame();
         }
+
     }
 
     function winGame() {
         console.log('well done, have a cup of tea');
+        win = true;
     }
 
     /*function compareOrders() {
