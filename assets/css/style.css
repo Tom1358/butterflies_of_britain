@@ -3,7 +3,12 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+/*-----------------------------index.html-------------------------------------*/
 
+#flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /*-----------------------------game.html-------------------------------------*/
 
