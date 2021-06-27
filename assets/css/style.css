@@ -36,7 +36,7 @@ body {
 }
 
 #background-image {
-    background: url('/butterfly_hero.jpg');
+    background: url("/assets/images/butterfly_hero.jpg");
     background-size: cover;
     height: 50vh;
     width: 100%;
