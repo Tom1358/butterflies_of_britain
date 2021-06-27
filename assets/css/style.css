@@ -104,6 +104,10 @@ li {
     border-radius: 50%;
 }
 
+.home_image_text {
+    text-align: center;
+}
+
 @media only screen and (min-width: 546px) {
     .home_image {
         height: 150px;
