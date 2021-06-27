@@ -69,6 +69,20 @@ li {
     list-style-type: circle;
 }
 
+.link-div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 5px;
+    border: black solid 1px;
+    background-color: blue;
+}
+
+.link {
+    display: inline;
+}
+
 /*-----------------------------game.html-------------------------------------*/
 
 .background-image { 
