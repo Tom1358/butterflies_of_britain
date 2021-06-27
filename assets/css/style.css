@@ -239,7 +239,6 @@ p {
     }
 }
 
-
 .game-controls {
     display: flex;
     justify-content: center;
@@ -251,10 +250,14 @@ p {
     cursor: pointer;
 }
 
-#audio {
+#audio_button {
     border-radius: 50%;
 }
 
 #mute {
     border-radius: 50%;
+}
+
+.navigation {
+    text-align: center;
 }
