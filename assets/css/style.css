@@ -96,6 +96,15 @@ li {
     align-items: center;
 }
 
+.home_image {
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    justify-items: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
 /*-----------------------------game.html-------------------------------------*/
 
 .background-image { 
