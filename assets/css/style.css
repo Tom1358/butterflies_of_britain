@@ -36,10 +36,17 @@ body {
 }
 
 #background-image {
-    background: url('butterfly_hero.jpg');
+    background: url('/butterfly_hero.jpg');
     background-size: cover;
     height: 50vh;
     width: 100%;
+}
+
+.header-one {
+    color: white;
+    position: absolute;
+    top: 40vh;
+    padding: 0 10px 0 10px;
 }
 
 /*-----------------------------game.html-------------------------------------*/
