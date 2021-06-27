@@ -7,13 +7,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("user_4TTKJgFz7ioWKZVsKRnQ3");
+    })();
+    </script>
     <title>Milestone Two</title>
 </head>
 <body>
     <h1 class="form-header">Contact Form</h1>
     <h2 class="form-header">Feedback or questions?  Please fill in the following:</h2>
     <div class="form-holder">
-        <form class="form" action="#" method="POST">
+        <form class="form" onsubmit="return sendMail(this)">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input name="full_name" class="form-control" id="name" placeholder="Your name here" required>
@@ -31,7 +39,6 @@
                 <label for="accessibility">Your Question or Feedback</label>
                 <textarea name="accessibility" class="form-control" id="accessibility" rows="2" placeholder="Your message here" required></textarea>
             </div> <br>
-            <!--below button does not link correctly to completed_form.html - known issue-->
             <button type="submit" class="btn btn-primary" id="form_submit">Submit</button>
         </form>
     </div>
@@ -40,7 +47,7 @@
             <a href="index.html">Home</a>
         </span>
     </div>
-    <script src="app.js"></script>
+    <script src="contact.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
