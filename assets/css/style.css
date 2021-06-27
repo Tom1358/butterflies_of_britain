@@ -25,6 +25,16 @@ body {
     position: relative;
 }
 
+@media only screen and (max-width: 546px) {
+    #column-one {
+        flex: 100%;
+    }
+
+    #column-two {
+        flex: 100%;
+    }
+}
+
 /*-----------------------------game.html-------------------------------------*/
 
 .background-image { 
