@@ -83,6 +83,19 @@ li {
     display: inline;
 }
 
+#grid-container {
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+        "top-left top-middle top-right"
+        "middle-left middle-middle middle-right"
+        "bottom-left bottom-middle bottom-right";
+    column-gap: 5px;
+    row-gap: 5px;
+    justify-items: center;
+    align-items: center;
+}
+
 /*-----------------------------game.html-------------------------------------*/
 
 .background-image { 
