@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const butterflyImageThree = document.getElementById("butterfly_image_three");
     const butterflyImageFour = document.getElementById("butterfly_image_four");
 
-    document.getElementById('audio').addEventListener('click', volumeOn);
+    document.getElementById('audio_button').addEventListener('click', volumeOn);
 
     function volumeOn() {
         document.getElementById('mute').classList.remove('hide-button');
-        document.getElementById('audio').classList.add('hide-button');
-        let audio = document.getElementsByTagName('audio');
+        document.getElementById('audio_button').classList.add('hide-button');
+        let audio = document.getElementsByTagName('audio_button');
         let i;
         for (i=0; i<audio.length; i++) {
             audio[i].muted=false;
@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('mute').addEventListener('click', volumeOff);
 
     function volumeOff() {
-        document.getElementById('audio').classList.remove('hide-button');
+        document.getElementById('audio_button').classList.remove('hide-button');
         document.getElementById('mute').classList.add('hide-button');
-        let audio = document.getElementsByTagName('audio');
+        let audio = document.getElementsByTagName('audio_button');
         let i;
         for (i=0; i<audio.length; i++) {
             audio[i].muted=true;
