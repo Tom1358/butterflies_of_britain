@@ -35,6 +35,13 @@ body {
     }
 }
 
+#background-image {
+    background: url('butterfly_hero.jpg');
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+}
+
 /*-----------------------------game.html-------------------------------------*/
 
 .background-image { 
