@@ -10,6 +10,21 @@ body {
     flex-wrap: wrap;
 }
 
+#column-one {
+    flex: 50%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#column-two {
+    flex: 50%;
+    background-color: green;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
 /*-----------------------------game.html-------------------------------------*/
 
 .background-image { 
