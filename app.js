@@ -271,27 +271,6 @@ document.addEventListener('DOMContentLoaded', function() {
         win = true;
     }
 
-    /*function compareOrders() {
-        let firstArray = playerOrder.toString();
-        let secondArray = roundOrder.toString()
-        if (firstArray !== secondArray) { // if the array is not the same, player loses
-            $('#level').text('incorrect butterfly...');
-            setTimeout(function() {
-                document.getElementById('play-game').style.visibility='visible';
-                console.log('fail');
-            }, 500);
-        } else {
-            if (roundOrder.length === playerOrder.length) { // if the player is correct, and the arrays are the same length, the next round begins
-                $('#level').text('well done!'); 
-                level++;
-                compTurn()
-            } else { // the player's turn continues
-                //$('.butterflies').css("cursor", "pointer"); 
-                //playerTurn();
-            }; 
-        };
-    }; */
-
     function clearColor() {
         butterflyImageOne.style.backgroundColor = 'rgba(0,0,0,.0)';
         butterflyImageTwo.style.backgroundColor = 'rgba(0,0,0,.0)';
