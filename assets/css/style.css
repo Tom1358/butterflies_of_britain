@@ -49,6 +49,12 @@ body {
     padding: 0 10px 0 10px;
 }
 
+@media only screen and (max-width: 280px) {
+    .header-one {
+        top: 32vh;
+    }
+}
+
 /*-----------------------------game.html-------------------------------------*/
 
 .background-image { 
