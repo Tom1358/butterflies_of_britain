@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // random number pushed into the 'round order' array
     function compTurn() {
         roundOrder = [];
+        $('#level').text('Level'+' '+level);
         console.log("LEVEL: ", level)
         for (i = 0; i < level; i++) {
             roundOrder.push(Math.floor(Math.random()*4)+1);
@@ -228,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // console.log(2, "firstArray !== secondArray")
             } else if (firstArray == secondArray && !win) {
                 // console.log(3, "firstArray == secondArray && !win")
-                $('#level').text('Well done, keep it up!');
+                $('#level').text('Well done!');
                 level++;
                 setTimeout( function() {
                     clearColor();
@@ -238,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     playerOrder = [];
                     roundOrder = [];
                     setTimeout(compTurn(), 800);
-                }, 400);
+                }, 2000);
             }
         }
         
@@ -260,14 +261,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 400);
         }
 
-        if (playerOrder.length == 10 && good) {
+        if (playerOrder.length == 5 && good) {
             winGame();
         }
 
     }
 
     function winGame() {
-        console.log('well done, have a cup of tea');
+        $('#level').text("Great job, you've won the game!");
         win = true;
     }
 
