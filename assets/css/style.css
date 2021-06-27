@@ -55,6 +55,20 @@ body {
     }
 }
 
+.header-two {
+    padding-top: 5px;
+    padding: 0 10px 0 10px;
+}
+
+.text {
+    padding: 0 10px 0 10px;
+    
+}
+
+li {
+    list-style-type: circle;
+}
+
 /*-----------------------------game.html-------------------------------------*/
 
 .background-image { 
