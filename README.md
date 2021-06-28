@@ -80,19 +80,33 @@ Technologies Used
 * Am I Responsive was used to create images in this Readme file of each page displayed on different screen sizes.
 * Balsamiq was used to create the wireframes during the design process.
 
-### Testing
-Automated Testing
+# Testing
+## Automated Testing
 ------------------------------
-Validation Services
+### Validation Services
 ------------------------------
 * The W3C CSS Validation Service - Jigsaw was used for CSS code in this project, which the code passed with no errors or warnings.
 * The W3C Markup Validation Service was used for HTML code in this project, and the code passed with no errors or warnings.
 
 ------------------------------
-User Stories Testing
+### User Stories Testing
 ------------------------------
-* As a ______________, I want:
+#### As a individual wanting to learn more about butterflies, I want to:
+* Be introduced to the names of several types of butterfly.
+    * On the homepage, there are nine butterflies for desktop, and six butterflies for mobile viewing, all of which are labelled.
+* Be tested on the types of butterfly I have been introduced to.
+    * The 'Simon Says'-based memory game tests the user's memory of these names, and drills through repetition to help the user remember.
+* Contact the owner of the website if necessary.
+    * The contact form sends an email to the website designer to allow them to receive any feedback or requests from the user.
 
+#### As a developer, I want:
+
+* To gain more knowledge on the use of JavaScript to enhance interactivity of websites.
+    * Three months ago, I knew no JavaScript.  I need to keep reminding myself of this to keep things in perspective - I do not expect to know it all after three months, or a year.  However, this game has provided a springboard to learn a great deal of JS.
+* To entertain both myself and the end-user in the process of testing the names of butterflies.
+    * As the game mechanics work, it is an entertaining game that serves its purpose.
+* For users to be able to contact me for questions or feedback on the website.
+    * Users are able to send feedback or requests using the form provided.
 ------------------------------
 Manual Testing
 ------------------------------
@@ -158,7 +172,7 @@ Images of butterflies were taken from:
 
 ------------------------------
 # Acknowledgements 
-------------------------------
+
 Special thanks to my mentor Gerry Mcbride for patiently going through my code and correcting where necessary, giving helpful ideas and direction, and keeping me informed what is expected of my website and code in industry.
 ------------------------------
 Disclaimer
