@@ -87,11 +87,6 @@ Validation Services
 ------------------------------
 * The W3C CSS Validation Service - Jigsaw was used for CSS code in this project, which the code passed with no errors or warnings.
 * The W3C Markup Validation Service was used for HTML code in this project, and the code passed with no errors or warnings.
-* In Chrome Developer Tools, Lighthouse reports were generated to see if there were any ways that the website could be optimised or enhanced.
-* Homepage Lighthouse Summary
-* Gallery Page Lighthouse Summary
-* About Page Lighthouse Summary
-* Contact Page Lighthouse Summary
 
 ------------------------------
 User Stories Testing
@@ -118,12 +113,12 @@ Deployment
 ------------------------------
 Github pages
 The project was deployed to Github Pages using the following steps:
-Log in to Github and navigate to the Github repository
-Under the repository name, click 'Settings'.
-In the left sidebar, click 'Pages'.
-Under 'Github Pages', click the 'None' dropdown arrow, and choose the Master branch.
-Click Save.
-The site is then ready to be published at the link.
+* Log in to Github and navigate to the Github repository
+* Under the repository name, click 'Settings'.
+* In the left sidebar, click 'Pages'.
+* Under 'Github Pages', click the 'None' dropdown arrow, and choose the Master branch.
+* Click Save.
+* The site is then ready to be published at the link.
 ------------------------------
 How to Run Project Locally
 ------------------------------
@@ -138,16 +133,31 @@ Then, follow these steps:
 * Click the green 'Gitpod' button. This will trigger a new Gitpod workspace, created from the code in Github, where you can work locally.
 
 ------------------------------
-Credits
+# Credits
 ------------------------------
-Content
+## Content
 
-Code
+All text in the website has been written by myself.<br>
+Images of butterflies were taken from:
+* www.unsplash.com
+* www.pixabay.com 
+* https://butterfly-conservation.org/butterflies/identify-a-butterfly 
 
-The Readme file's structure was based on, and adapted from, Code: Institute's Anna Greave's Readme for her website, viewable here.
-The deployment instructions were based on those from the GitHub docs, viewable here.
+## Sources of code
+* How to start coding a memory game in JS:
+    *  https://www.youtube.com/watch?v=n_ec3eowFLQ&t=2706s 
+* How to set a delay between flashing images:
+    * https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/ 
+* How to compare two arrays in JS:
+    * https://www.youtube.com/watch?v=xxDqhU-0mek&t=257s 
+* For API use in contact form:
+    * https://www.emailjs.com/docs/sdk/send-form/ 
+* For API use in contact form:
+    * www.code-institute.net
+
+
 ------------------------------
-Acknowledgements
+# Acknowledgements 
 ------------------------------
 Special thanks to my mentor Gerry Mcbride for patiently going through my code and correcting where necessary, giving helpful ideas and direction, and keeping me informed what is expected of my website and code in industry.
 ------------------------------
