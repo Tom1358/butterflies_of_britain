@@ -43,7 +43,8 @@ Balsamiq was used to design the wireframes for this project.  As the project was
 By amending the website in this way, it means fewer clicks for the user, and a simpler, cleaner, more satisfying experience.
 
 ### Design
-Basic colours of black and grey were used for text colours and tables, to ensure contrast was high and easily legible.<br>
+Basic colours of white and black were used for text colours and tables, to ensure contrast was high and easily legible.<br>
+#567d46 was used - a grassy green - for the links between pages. <br>
 White text was used when needed over images to ensure font was easily legible. <br>
 The font Nunito from Google Fonts was chosen as it is clean, clear and basic, without being overly ostentatious. Sans Serif is the fallback font in case Nunito does not load correctly.
 
