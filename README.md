@@ -56,27 +56,29 @@ By amending the website, it means fewer clicks for the user, and a simpler, more
 ------------------------------
 Technologies Used
 ------------------------------
+### Languages
+* HTML was the main language of this project.
+* CSS was used to style the HTML.
+* JavaScript was used to allow interactivity with the website and for the contact form to function.
+
+### Libraries and Frameworks
+* FontAwesome was used for the start and audio icons in the game.
+* Bootstrap was used for partial structure of the website.
+* Google Fonts was used to style the font.
+* jQuery was used to simplify some of the JavaScript code, though sparingly.
+* Beepbox.com was used to generate the sounds when the butterflies flashed.
+* Chrome DevTools was regularly used to test the responsiveness of the website for different devices, and debug any issues.
+
+### Validation Services
+* Validator.w3.org was used to validate the HTML code.
+* Jigsaw.w3.org/css-validator was used to validate the CSS code.
+* JSHint was used to validate the JacvaScript code.
+
 ### Tools
-
-Git was used to handle version control.
-GitHub was used to store and share project code.
-Am I Responsive was used to create images in this Readme file of each page displayed on different screen sizes.
-The Windows Snipping Tool for images in this Readme of smaller sections of website pages.
-Balsamiq was used to create the wireframes during the design process.
-
-### Languages Used
-HTML5
-CSS3
-
-### Frameworks and Libraries Used
-Bootstrap:
-used to assist with the responsiveness and styling of the website.
-Hover pseudoclass in CSS:
-Hover was used for each item in the navbar to add an underline element while being hovered over; this would add an element of responsiveness to the user whilst using the site.
-Google Fonts:
-Google fonts were used to import the Fira Sans font into the style.css file which is used on all pages throughout the project.
-Font Awesome:
-Font Awesome was used on all pages in the footer to make the links to social media more aesthetically pleasing, and to help improve the UX.
+* Git was used to handle version control.
+* GitHub was used to store and share project code.
+* Am I Responsive was used to create images in this Readme file of each page displayed on different screen sizes.
+* Balsamiq was used to create the wireframes during the design process.
 
 ### Testing
 Automated Testing
