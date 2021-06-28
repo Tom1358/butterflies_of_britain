@@ -1,75 +1,58 @@
-# Milestone Two
-Introduction
-------------------------------
-Butterflies are a natural beauty that are underappreciated by many people.  This website will aim to help users to name some of the more common butterflies that they may see in their garden or in local parks.
+# Butterflies of Britain Website
+
+Butterflies are a natural beauty that are underappreciated by many people.  This website will aim to help users to name some of the more common butterflies that they may see in their garden or in local parks.<br>
 It will provide users with the images and names of several common butterflies in Britain, and will then lead to a ‘Simon Says’-based memory game that will test their knowledge of the butterflies’ names.
 
 Screenshot of Homepage
 ------------------------------
-description of project
-------------------------------
 
 UX
 ------------------------------
-Goals
-------------------------------
-User goals
-* .
-* .
-* .
-
-Industry/ Business Goals
-* .
-* .
-* .
-
-User Stories
-As a ____________________, I want:
-* .
-* .
-* .
-------------------------------
-Design
-------------------------------
-Colour Scheme
-------------------------------
-The two main colours used are
-
-Typography
-------------------------------
-The __________________ font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly...
-
-Imagery
-------------------------------
-
-Wireframes
-Balsamiq was used to design the wireframes for this project. 
-There were the following amendments made to the original wireframes that resulted in the completed project:
+This website is aimed for anyone who is wanting to become familiar with common butterflies that they may see.  It is only focused on the names of common butterflies; it is assumed that with this information, people wanting more would then be able to use those names to investigate other sources further.
 
 ------------------------------
-AmIResponsive screenshots below
+### User Stories
+As a individual wanting to learn more about butterflies, I want to:
+* Be introduced to the names of several types of butterfly.
+* Be tested on the types of butterfly I have been introduced to.
+* Contact the owner of the website if necessary.
+
+As a developer, I want:
+* To gain more knowledge on the use of JavaScript to enhance interactivity of websites.	
+* To entertain both myself and the end-user in the process of testing the names of butterflies.
+* For users to be able to contact me for questions or feedback on the website.
+
+### Wireframes
+Balsamiq was used to design the wireframes for this project.  As the project was developed, the original design of a five-page website was redesigned to a three-page website to streamline and simplify the experience.  
+
+## Original wireframes
+## Redesigned wireframes
+
+By amending the website, it means fewer clicks for the user, and a simpler, more satisfying experience.
 ------------------------------
-Home Page for Desktop
-Gallery Page for Desktop
-About Page for Desktop
-Contact Page for Desktop
-Home Page for Mobile
-Gallery Page for Mobile
-About Page for Mobile
-Contact Page for Mobile
+# Design
+------------------------------
+* Basic colours of black and grey were used for text colours and tables, to ensure contrast was high and easily legible.  
+* White text was used when needed over images to ensure font was easily legible.
+* The font Nunito from Google Fonts was chosen as it is clean, clear and basic, without being overly ostentatious. Sans Serif is the fallback font in case Nunito does not load correctly.
 
 ------------------------------
-Features
+# Features
 ------------------------------
-Existing features
-On all pages:
-
-On each page:
-
+## Existing features
+* The home page features links to the game and the contact page.
+* The game features links to the home page and the contact page.
+* The contact page features a link to the home page.
+* The instructions on the home page allow the user to read the instructions to play the game, and use the website.
+* The start button allows users to start the game.
+* The audio button allows users to control the sound of the game.
+* The four butterflies on the game screen allow the user to interact with the game.
+* The contact form allows users to contact the owner of the website for questions or feedback.
 ------------------------------
-Features left to implement
+## Features left to implement
 ------------------------------
-
+* The game to pause between levels, and the user to click a ‘continue’ button
+* Ability to pause the game, access the home screen or contact page, and go back to the game to continue where they left off.
 ------------------------------
 Technologies Used
 ------------------------------
