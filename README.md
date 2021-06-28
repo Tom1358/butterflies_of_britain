@@ -1,6 +1,9 @@
 # Milestone Two
 Introduction
 ------------------------------
+Butterflies are a natural beauty that are underappreciated by many people.  This website will aim to help users to name some of the more common butterflies that they may see in their garden or in local parks.
+It will provide users with the images and names of several common butterflies in Britain, and will then lead to a ‘Simon Says’-based memory game that will test their knowledge of the butterflies’ names.
+
 Screenshot of Homepage
 ------------------------------
 description of project
