@@ -6,7 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const butterflyImageThree = document.getElementById("butterfly_image_three");
     const butterflyImageFour = document.getElementById("butterfly_image_four");
 
-    document.getElementById('audio_button').addEventListener('click', volumeOn);
+    $('#butterfly_image_one').click(() => {
+        $('#sound-three').play;
+        console.log('it works')
+    })
+
+    /*document.getElementById('audio_button').addEventListener('click', volumeOn);
 
     function volumeOn() {
         document.getElementById('mute').classList.remove('hide-button');
@@ -30,7 +35,32 @@ document.addEventListener('DOMContentLoaded', function() {
             audio[i].muted=true;
         }
         console.log('vol off');
+    }*/
+
+    $('#mute_audio').hide();
+    $('#play_audio').show();
+
+    $('#mute_audio').click(() => {
+        $('#play_audio').show();
+        $('#mute_audio').hide();
+    });
+
+    $('#play_audio').click(() => {
+        $('#play_audio').hide();
+        $('#mute_audio').show();
+    });
+
+    /*if ($('#mute_audio').show()) {
+        () => {
+            Audio.prop('muted', false);
+        }
     }
+
+    if ($('#mute_audio').hide()) {
+        () => {
+            Audio.prop('muted', false);
+        }
+    }*/
 
     // RANDOM BUTTERFLY IMAGE STEP ONE: create random numbers
     let randomNum = Math.floor(Math.random()*4)+1;

@@ -245,11 +245,6 @@ p {
     margin-right: auto;
 }
 
-/* hide function for audion/ mute button */
-.hide-button {
-    visibility: hidden;
-}
-
 @media only screen and (max-width: 968px) {
     .butterflies {
         height: 180px;
@@ -289,11 +284,11 @@ p {
     cursor: pointer;
 }
 
-#audio_button {
+#play_audio {
     border-radius: 50%;
 }
 
-#mute {
+#mute_audio {
     border-radius: 50%;
 }
 
