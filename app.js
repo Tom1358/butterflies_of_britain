@@ -117,19 +117,13 @@ document.addEventListener('DOMContentLoaded', function() {
         $('#play_audio').show();
         $('#mute_audio').hide();
         isMuted = true;
-        console.log('mute');
-        console.log(isMuted);
     });
 
     $('#play_audio').click(() => { // toggle audio/ muted buttons - WORKS
         $('#play_audio').hide();
         $('#mute_audio').show();
         isMuted = false;
-        console.log('play');
-        console.log(isMuted);
     });
-
-    console.log(isMuted);
 
 //     if ($('#mute_audio').click()) { // mute audio if 'audio' button shows - FAIL
 //         isMuted = true;
