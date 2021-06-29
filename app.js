@@ -32,12 +32,17 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('vol off');
     }*/
 
-    $('#test').prop('muted');  //try to immediately mute the button - FAIL
+        
+        
 
-    $('#test').click( () => {  // try to mute the button within a function - FAIL - though console.log does work
-        $('#test').prop('muted');
-        console.log('works')
-    })
+        $('#test').click(() => {
+            let tune = new Audio('assets/sounds/sound_four.mp3');
+            tune.play();
+            console.log('works');
+        });
+
+    
+    $('#sound-one').attr('muted', true);  //try to immediately mute the button - FAIL
 
     $('#mute_audio').hide(); // start with audio button showing - WORKS
     $('#play_audio').show();
@@ -47,15 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#sound-three').prop('muted');
     $('#sound-four').prop('muted');
 
-    $('#mute_audio').click(() => { // toggle audio/ muted buttons - WORKS
-        $('#play_audio').show();
-        $('#mute_audio').hide();
-    });
-
-    $('#play_audio').click(() => { // toggle audio/ muted buttons - WORKS
-        $('#play_audio').hide();
-        $('#mute_audio').show();
-    });
+    
 
     if ($('#mute_audio').show()) {  // allow audio to play if 'mute' button shows - FAIL
         () => {
@@ -111,9 +108,36 @@ document.addEventListener('DOMContentLoaded', function() {
     let roundOrder = [];
     let runningSequence = [];
     let playerOrder = [];
-    let awaiting_action=false; // when it's player's turn, JS awaits player's input
+    let awaiting_action = false; // when it's player's turn, JS awaits player's input
     let good = false;
     let win = false;
+    let isMuted = true;
+
+    $('#mute_audio').click(() => { // toggle audio/ muted buttons - WORKS
+        $('#play_audio').show();
+        $('#mute_audio').hide();
+        isMuted = true;
+        console.log('mute');
+        console.log(isMuted);
+    });
+
+    $('#play_audio').click(() => { // toggle audio/ muted buttons - WORKS
+        $('#play_audio').hide();
+        $('#mute_audio').show();
+        isMuted = false;
+        console.log('play');
+        console.log(isMuted);
+    });
+
+    console.log(isMuted);
+
+//     if ($('#mute_audio').click()) { // mute audio if 'audio' button shows - FAIL
+//         isMuted = true;
+//     }
+
+//     if ($('#play_audio').click()) { // mute audio if 'audio' button shows - FAIL
+//         isMuted = false;
+// }
 
     function tryAgain() {
         level = 1;
@@ -224,8 +248,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Butterfly images to flash for half a second
     function butterflyOne() {
         butterflyImageOne.style.backgroundColor = '#00FF00';
-        let audio = document.getElementById('sound-one');
-        audio.play();
+        if (isMuted !== true) {
+            let audio = new Audio('assets/sounds/sound_one.mp3');
+            audio.play();
+        }
         setTimeout(function () {
         butterflyImageOne.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 400);
@@ -233,8 +259,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function butterflyTwo() {
         butterflyImageTwo.style.backgroundColor = '#800000';
-        let audio = document.getElementById('sound-two');
-        audio.play();
+        if (isMuted !== true) {
+            let audio = new Audio('assets/sounds/sound_two.mp3');
+            audio.play();
+        }
         setTimeout(function () {
             butterflyImageTwo.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 400);
@@ -242,8 +270,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function butterflyThree() {
         butterflyImageThree.style.backgroundColor = '#FFFF00';
-        let audio = document.getElementById('sound-three');
-        audio.play();
+        if (isMuted !== true) {
+            let audio = new Audio('assets/sounds/sound_three.mp3');
+            audio.play();
+        }
         setTimeout(function () {
             butterflyImageThree.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 400);
@@ -251,8 +281,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function butterflyFour() {
         butterflyImageFour.style.backgroundColor = '#0000FF';
-        let audio = document.getElementById('sound-four');
-        audio.play();
+        if (isMuted !== true) {
+            let audio = new Audio('assets/sounds/sound_four.mp3');
+            audio.play();
+        }
         setTimeout(function () {
             butterflyImageFour.style.backgroundColor = 'rgba(0,0,0,.0)';
         }, 400);
