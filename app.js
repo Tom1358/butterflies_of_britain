@@ -5,12 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const butterflyImageTwo = document.getElementById("butterfly_image_two");
     const butterflyImageThree = document.getElementById("butterfly_image_three");
     const butterflyImageFour = document.getElementById("butterfly_image_four");
-
-    $('#butterfly_image_one').click(() => {
-        $('#sound-three').play;
-        console.log('it works')
-    })
-
+    
     /*document.getElementById('audio_button').addEventListener('click', volumeOn);
 
     function volumeOn() {
@@ -37,30 +32,48 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('vol off');
     }*/
 
-    $('#mute_audio').hide();
+    $('#test').prop('muted');  //try to immediately mute the button - FAIL
+
+    $('#test').click( () => {  // try to mute the button within a function - FAIL - though console.log does work
+        $('#test').prop('muted');
+        console.log('works')
+    })
+
+    $('#mute_audio').hide(); // start with audio button showing - WORKS
     $('#play_audio').show();
 
-    $('#mute_audio').click(() => {
+    $('#sound-one').prop('muted'); // initially start page with everything muted - FAIL
+    $('#sound-two').prop('muted');
+    $('#sound-three').prop('muted');
+    $('#sound-four').prop('muted');
+
+    $('#mute_audio').click(() => { // toggle audio/ muted buttons - WORKS
         $('#play_audio').show();
         $('#mute_audio').hide();
     });
 
-    $('#play_audio').click(() => {
+    $('#play_audio').click(() => { // toggle audio/ muted buttons - WORKS
         $('#play_audio').hide();
         $('#mute_audio').show();
     });
 
-    /*if ($('#mute_audio').show()) {
+    if ($('#mute_audio').show()) {  // allow audio to play if 'mute' button shows - FAIL
         () => {
-            Audio.prop('muted', false);
+            $('#sound-one').prop('muted', false); 
+            $('#sound-two').prop('muted', false);
+            $('#sound-three').prop('muted', false);
+            $('#sound-four').prop('muted', false);
         }
     }
 
-    if ($('#mute_audio').hide()) {
+    if ($('#mute_audio').hide()) { // mute audio if 'audio' button shows - FAIL
         () => {
-            Audio.prop('muted', false);
+            $('#sound-one').prop('muted', true);
+            $('#sound-two').prop('muted', true);
+            $('#sound-three').prop('muted', true);
+            $('#sound-four').prop('muted', true);
         }
-    }*/
+    }
 
     // RANDOM BUTTERFLY IMAGE STEP ONE: create random numbers
     let randomNum = Math.floor(Math.random()*4)+1;
