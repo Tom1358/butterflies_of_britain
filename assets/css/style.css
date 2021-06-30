@@ -299,14 +299,20 @@ p {
 
 /*-----------------------------contact.html-------------------------------------*/
 
+
 .form-header {
     padding: 30px 10px 0 10px;
     text-align: center;
+    color: white;
 }
 
 .form-holder{
     display: block;
     text-align: center;
+}
+
+label {
+    color: white;
 }
 
 #contact-form {
