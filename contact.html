@@ -13,10 +13,10 @@
     <h1 class="form-header">Contact Form</h1>
     <h2 class="form-header">Feedback or questions?  Please fill in the following:</h2>
     <div class="form-holder">
-        <form class="form" onsubmit="return sendMail(this)">
+        <form id="contact-form">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input name="full_name" class="form-control" id="name" placeholder="Your name here" required>
+                <input name="name" class="form-control" id="name" placeholder="Your name here" required>
             </div> <br>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -26,7 +26,7 @@
                 <label for="information">Your Question or Feedback</label>
                 <textarea name="information" class="form-control" id="information" rows="2" placeholder="Your message here" required></textarea>
             </div> <br>
-            <button type="submit" class="btn btn-primary" id="form_submit">Submit</button>
+            <input type="submit" value="Submit" class="btn btn-primary" id="form_submit">
         </form>
     </div>
     <div class="col-12 navigation" id="contact_nav">
@@ -35,13 +35,10 @@
         </span>
     </div>
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-    </script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function(){
-            emailjs.init("user_4TTKJgFz7ioWKZVsKRnQ3");
+        (function() {
+        emailjs.init("user_4TTKJgFz7ioWKZVsKRnQ3");
         })();
     </script>
 
