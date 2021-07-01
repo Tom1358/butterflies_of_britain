@@ -1,46 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() { 
+document.addEventListener('DOMContentLoaded', function () {
 
     // define butterfly images in game
     const butterflyImageOne = document.getElementById("butterfly_image_one");
     const butterflyImageTwo = document.getElementById("butterfly_image_two");
     const butterflyImageThree = document.getElementById("butterfly_image_three");
     const butterflyImageFour = document.getElementById("butterfly_image_four");
-    
-    /*document.getElementById('audio_button').addEventListener('click', volumeOn);
-
-    function volumeOn() {
-        document.getElementById('mute').classList.remove('hide-button');
-        document.getElementById('audio_button').classList.add('hide-button');
-        let audio = document.getElementsByTagName('audio_button');
-        let i;
-        for (i=0; i<audio.length; i++) {
-            audio[i].muted=false;
-        }
-        console.log('vol on');
-    }
-    
-    document.getElementById('mute').addEventListener('click', volumeOff);
-
-    function volumeOff() {
-        document.getElementById('audio_button').classList.remove('hide-button');
-        document.getElementById('mute').classList.add('hide-button');
-        let audio = document.getElementsByTagName('audio_button');
-        let i;
-        for (i=0; i<audio.length; i++) {
-            audio[i].muted=true;
-        }
-        console.log('vol off');
-    }*/
-
-        
-        
-
-        $('#test').click(() => {
-            let tune = new Audio('assets/sounds/sound_four.mp3');
-            tune.play();
-            console.log('works');
-        });
-
     
     $('#sound-one').attr('muted', true);  //try to immediately mute the button - FAIL
 
