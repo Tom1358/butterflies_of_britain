@@ -97,12 +97,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function compTurn() {
         roundOrder = [];
         $('#level').text('Level' + ' ' + level);
-        console.log("LEVEL: ", level)
+        console.log("LEVEL: ", level);
         for (i = 0; i < level; i++) {
             roundOrder.push(Math.floor(Math.random() * 4) + 1);
         }
         setTimeout(function () {
-            console.log("RoundOrder: ", roundOrder.length)
+            console.log("RoundOrder: ", roundOrder.length);
             for (i = 0; i < roundOrder.length; i++) {
                 butterflyFlash(i); // for the number of numbers in the 'round order' array, the butterflies will flash
             }
