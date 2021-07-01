@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
     $('#sound-three').prop('muted');
     $('#sound-four').prop('muted');
 
-    
-
     if ($('#mute_audio').show()) {  // allow audio to play if 'mute' button shows - FAIL
         () => {
             $('#sound-one').prop('muted', false); 
@@ -302,7 +300,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function winGame() {
         $('#level').text("Great job, you've won the game!");
-        win = true;
+        setTimeout( function() {
+            clearColor();
+            level = 1;
+            firstArray = [];
+            secondArray = [];
+            runningSequence = [];
+            playerOrder = [];
+            roundOrder = [];
+            setTimeout(tryAgain(), 1000);
+        }, 2000);
     }
 
     function clearColor() {
