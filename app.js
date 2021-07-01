@@ -1,38 +1,48 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Variables used in game
+    let level = 1;
+    let roundOrder = []; // order computer will flash in
+    let runningSequence = [];  // incrementing until sequence is same as roundOrder
+    let playerOrder = []; // the player's chosen sequence
+    let awaiting_action = false; // when it's player's turn, JS awaits player's input
+    let good = false;
+    let win = false;
+    let isMuted = true;
+
     // define butterfly images in game
     const butterflyImageOne = document.getElementById("butterfly_image_one");
     const butterflyImageTwo = document.getElementById("butterfly_image_two");
     const butterflyImageThree = document.getElementById("butterfly_image_three");
     const butterflyImageFour = document.getElementById("butterfly_image_four");
-    
-    $('#sound-one').attr('muted', true);  //try to immediately mute the button - FAIL
 
-    $('#mute_audio').hide(); // start with audio button showing - WORKS
+    // start with audio button showing
+    $('#mute_audio').hide(); 
     $('#play_audio').show();
 
-    $('#sound-one').prop('muted'); // initially start page with everything muted - FAIL
+    // initially start page with everything muted
+    $('#sound-one').prop('muted'); 
     $('#sound-two').prop('muted');
     $('#sound-three').prop('muted');
     $('#sound-four').prop('muted');
 
-    if ($('#mute_audio').show()) {  // allow audio to play if 'mute' button shows - FAIL
-        () => {
-            $('#sound-one').prop('muted', false); 
-            $('#sound-two').prop('muted', false);
-            $('#sound-three').prop('muted', false);
-            $('#sound-four').prop('muted', false);
-        }
-    }
+    // if ($('#mute_audio').show()) {  // allow audio to play if 'mute' button shows
+    //     () => {
+    //         $('#sound-one').prop('muted', false); 
+    //         $('#sound-two').prop('muted', false);
+    //         $('#sound-three').prop('muted', false);
+    //         $('#sound-four').prop('muted', false);
+    //     }
+    // }
 
-    if ($('#mute_audio').hide()) { // mute audio if 'audio' button shows - FAIL
-        () => {
-            $('#sound-one').prop('muted', true);
-            $('#sound-two').prop('muted', true);
-            $('#sound-three').prop('muted', true);
-            $('#sound-four').prop('muted', true);
-        }
-    }
+    // if ($('#mute_audio').hide()) { // mute audio if 'audio' button shows - FAIL
+    //     () => {
+    //         $('#sound-one').prop('muted', true);
+    //         $('#sound-two').prop('muted', true);
+    //         $('#sound-three').prop('muted', true);
+    //         $('#sound-four').prop('muted', true);
+    //     }
+    // }
 
     // RANDOM BUTTERFLY IMAGE STEP ONE: create random numbers
     let randomNum = Math.floor(Math.random()*4)+1;
@@ -65,15 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // run function to apply randomly generated images
     randomButterflyImage();
 
-    // Variables used in game
-    let level = 1;
-    let roundOrder = [];
-    let runningSequence = [];
-    let playerOrder = [];
-    let awaiting_action = false; // when it's player's turn, JS awaits player's input
-    let good = false;
-    let win = false;
-    let isMuted = true;
+    
 
     $('#mute_audio').click(() => { // toggle audio/ muted buttons - WORKS
         $('#play_audio').show();
