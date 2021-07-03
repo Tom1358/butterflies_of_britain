@@ -39,25 +39,25 @@ document.addEventListener('DOMContentLoaded', function () {
     // RANDOM BUTTERFLY IMAGE STEP TWO: Change source of images to change picture (ref https://thisinterestsme.com/change-src-image-javascript/)
     function randomButterflyImage() {
         if (randomNum === 1) {
-            butterflyImageOne.src = 'assets/images/brown_argus.jpg';
-            butterflyImageTwo.src = 'assets/images/comma.jpg';
-            butterflyImageThree.src = 'assets/images/dark_green_fritillary.jpg';
-            butterflyImageFour.src = 'assets/images/marbled_white.jpg';
-        } else if (randomNum === 2) {
-            butterflyImageOne.src = 'assets/images/marbled_white.jpg';
+            butterflyImageOne.src = 'assets/images/adonis_blue.jpg';
             butterflyImageTwo.src = 'assets/images/brown_argus.jpg';
-            butterflyImageThree.src = 'assets/images/comma.jpg';
-            butterflyImageFour.src = 'assets/images/dark_green_fritillary.jpg';
+            butterflyImageThree.src = 'assets/images/chequered_skipper.jpg';
+            butterflyImageFour.src = 'assets/images/comma.jpg';
+        } else if (randomNum === 2) {
+            butterflyImageOne.src = 'assets/images/common_blue.jpg';
+            butterflyImageTwo.src = 'assets/images/dark_green_fritillary.jpg';
+            butterflyImageThree.src = 'assets/images/large_tortoiseshell.jpg';
+            butterflyImageFour.src = 'assets/images/large_white.jpg';
         } else if (randomNum === 3) {
             butterflyImageOne.src = 'assets/images/marbled_white.jpg';
-            butterflyImageTwo.src = 'assets/images/dark_green_fritillary.jpg';
+            butterflyImageTwo.src = 'assets/images/adonis_blue.jpg';
             butterflyImageThree.src = 'assets/images/brown_argus.jpg';
-            butterflyImageFour.src = 'assets/images/comma.jpg';
+            butterflyImageFour.src = 'assets/images/chequered_skipper.jpg';
         } else {
             butterflyImageOne.src = 'assets/images/dark_green_fritillary.jpg';
-            butterflyImageTwo.src = 'assets/images/marbled_white.jpg';
-            butterflyImageThree.src = 'assets/images/comma.jpg';
-            butterflyImageFour.src = 'assets/images/brown_argus.jpg';
+            butterflyImageTwo.src = 'assets/images/common_blue.jpg';
+            butterflyImageThree.src = 'assets/images/large_tortoiseshell.jpg';
+            butterflyImageFour.src = 'assets/images/large_white.jpg';
         }
     }
 
