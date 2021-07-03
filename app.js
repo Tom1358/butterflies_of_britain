@@ -136,12 +136,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 800 * i);
     }
 
+    // Player takes control and is able to click butterflies to select them
     function playerTurn() {
         document.getElementById('play-game').style.visibility = 'hidden';
         $('.butterflies').css("cursor", "pointer");
         awaiting_action = true;
     }
 
+    // for each click, a number is pushed to the 'playerOrder' array, it checks to see if it is the end of the player's turn, and the butterfly flashes.
     $('#butterfly_image_one').click(function () {
         if (awaiting_action) {
             playerOrder.push(1);
@@ -174,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Butterfly images to flash for half a second
+    // Butterfly images to flash for half a second, and make sound
     function butterflyOne() {
         butterflyImageOne.style.backgroundColor = '#00FF00';
         if (isMuted !== true) {
@@ -219,19 +221,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 400);
     }
 
+    // check to see the status after each player's button click
     function check() {
         let firstArray = playerOrder.toString();
         let secondArray = roundOrder.toString();
         console.log("First: ", firstArray); // help to ensure game is functioning correctly
         console.log("Second: ", secondArray);
         if (firstArray.length !== secondArray.length) {
-            playerTurn();
+            playerTurn(); // if player hasn't chosen the same number of butterflies as the computer, it continues to be their turn
         } else {
             if (firstArray !== secondArray) {
-                good = false;
+                good = false; // if player's choices don't match with computer's
             } else if (firstArray == secondArray && !win) {
                 $('#level').text('Well done!');
-                level++;
+                level++; // if, at the end of the round, the players' choices match with the computers...
                 setTimeout(function () {
                     clearColor();
                     firstArray = [];
@@ -244,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        if (good === false) {
+        if (good === false) { // if player's choices don't match with computer's
             $('#level').text('Wrong butterfly...');
             butterflyImageOne.style.backgroundColor = '#00FF00';
             butterflyImageTwo.style.backgroundColor = '#800000';
@@ -260,12 +263,14 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 400);
         }
 
+        //End of game
         if (playerOrder.length == 5 && good) {
             winGame();
         }
 
     }
 
+    // what happens at the end of the game
     function winGame() {
         $('#level').text("Great job, you've won the game!");
         setTimeout(function () {
@@ -280,6 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 2000);
     }
 
+    // to clear and reset all butterflies
     function clearColor() {
         butterflyImageOne.style.backgroundColor = 'rgba(0,0,0,.0)';
         butterflyImageTwo.style.backgroundColor = 'rgba(0,0,0,.0)';
