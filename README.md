@@ -25,20 +25,20 @@ As a developer, I want:
 Balsamiq was used to design the wireframes for this project.  As the project was developed, the original design of a five-page website was redesigned to a three-page website to streamline and simplify the experience.  
 
 #### Original wireframes
-* .
-* .
-* .
-* .
-* .
-* .
-* .
-* .
+* [desktop homepage](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/original/Desktop%20Home%20Page.png?raw=true)
+* [desktop types of butterfly](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/original/Desktop%20Types%20of%20Butterfly.png?raw=true)
+* [desktop game](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/original/Desktop%20Game.png?raw=true)
+* [desktop contact](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/original/Desktop%20Contact.png?raw=true)
+* [mobile homepage](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/original/Mobile%20Home%20Page.png?raw=true)
+* [mobile types of butterfly](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/original/Desktop%20Types%20of%20Butterfly.png?raw=true)
+* [mobile game](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/original/Mobile%20Game.png?raw=true)
+* [mobile contact](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/original/Mobile%20Contact.png?raw=true)
 
 #### Redesigned wireframes
-* .
-* .
-* .
-* .
+* [desktop homepage](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/redesigned/Redesigned%20Desktop%20Homepage.png?raw=true)
+* [mobile homepage](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/redesigned/Redesigned%20Mobile%20Home%20Page.png?raw=true)
+* [game page](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/redesigned/Redesigned%20Game%20Page.png?raw=true)
+* [contact page](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/redesigned/Redesigned%20Contact%20Page.png?raw=true)
 
 By amending the website in this way, it means fewer clicks for the user, and a simpler, cleaner, more satisfying experience.
 

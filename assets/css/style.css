@@ -37,7 +37,7 @@ body {
 }
 
 #background-image {
-    background: url("/assets/images/butterfly_hero.jpg");
+    background: url("https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/images/butterfly_hero.jpg?raw=true");
     background-size: cover;
     height: 50vh;
     width: 100%;
@@ -215,7 +215,7 @@ p {
 /*-----------------------------game.html-------------------------------------*/
 
 .background-image { 
-    background: url("/assets/images/meadow.jpg") no-repeat center center fixed; 
+    background: url("https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/images/meadow.jpg?raw=true") no-repeat center center fixed; 
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
