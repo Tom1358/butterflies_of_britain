@@ -95,10 +95,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // random number pushed into the 'round order' array
     function compTurn() {
-        roundOrder = [];
         $('#level').text('Level' + ' ' + level);
         console.log("LEVEL: ", level);
-        for (i = 0; i < level; i++) {
+        for (i = 0; i < 1; i++) {
             roundOrder.push(Math.floor(Math.random() * 4) + 1);
         }
         setTimeout(function () {
@@ -229,6 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("Second: ", secondArray);
         if (firstArray.length !== secondArray.length) {
             playerTurn(); // if player hasn't chosen the same number of butterflies as the computer, it continues to be their turn
+            console.log('Player Order:', playerOrder)
         } else {
             if (firstArray !== secondArray) {
                 good = false; // if player's choices don't match with computer's
@@ -239,9 +239,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     clearColor();
                     firstArray = [];
                     secondArray = [];
-                    runningSequence = [];
                     playerOrder = [];
-                    roundOrder = [];
                     setTimeout(compTurn(), 800);
                 }, 2000);
             }
