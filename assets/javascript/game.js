@@ -240,6 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     firstArray = [];
                     secondArray = [];
                     playerOrder = [];
+                    $('.butterflies').css("cursor", "");
                     setTimeout(compTurn(), 800);
                 }, 2000);
             }
@@ -257,6 +258,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 secondArray = [];
                 runningSequence = [];
                 playerOrder = [];
+                $('.butterflies').css("cursor", "");
                 setTimeout(tryAgain(), 800);
             }, 400);
         }

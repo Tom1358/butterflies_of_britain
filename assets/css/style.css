@@ -30,17 +30,6 @@ body {
     width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-    #column-one {
-        flex: 100%;
-    }
-
-    #column-two {
-        flex: 100%;
-        padding: 0 10px 0 10px;
-    }
-}
-
 #background-image {
     background: url("https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/images/butterfly_hero.jpg?raw=true");
     background-size: cover;
@@ -52,6 +41,7 @@ body {
     position: absolute;
     top:10%;
     right: 10vw;
+    left: 10px;
     color: white;
 }
 
@@ -199,6 +189,14 @@ li {
 
 .home_image_text {
     text-align: center;
+    color: white;
+}
+
+@media only screen and (max-width: 1028px) {
+    .home_image {
+        height: 10rem;
+        width: 10rem;
+    }
 }
 
 @media only screen and (max-width: 756px) {
@@ -304,6 +302,7 @@ p {
 .background-image { 
     background: url("https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/images/meadow.jpg?raw=true") no-repeat center center fixed; 
     height: 100vh;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
   }
