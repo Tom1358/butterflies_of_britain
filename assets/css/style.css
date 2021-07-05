@@ -151,6 +151,13 @@ li {
     border: solid 1px white;
 }
 
+@media only screen and (max-width: 321px) {
+    .butterfly-dropdown {
+    font-size: 12px;
+    }
+}
+
+
 #toggle-butterflies {
     text-align: center;
     padding-top: 10px;
@@ -178,10 +185,16 @@ li {
     }
 }
 
+@media only screen and (max-width: 281px) {
+    #grid-container {
+        margin: 0 5px 0 5px;
+    }
+}
+
 .home_image {
     text-align: center;
-    height: 250px;
-    width: 250px;
+    height: 10rem;
+    width: 10rem;
     justify-items: center;
     align-items: center;
     border-radius: 50%;
@@ -201,8 +214,8 @@ li {
 
 @media only screen and (max-width: 756px) {
     .home_image {
-        height: 200px;
-        width: 200px;
+        height: 10rem;
+        width: 10rem;
     }
 }
 
@@ -213,10 +226,10 @@ li {
     }
 }
 
-@media only screen and (max-width: 280px) {
+@media only screen and (max-width: 321px) {
     .home_image {
-        height: 70px;
-        width: 70px;
+        height: 100px;
+        width: 100px;
     }
 }
 
@@ -229,12 +242,14 @@ p {
     grid-area: top-left;
     justify-items: center;
     align-items: center;
+    text-align: center;
 }
 
 #img_2 {
     grid-area: top-middle;
     justify-items: center;
     align-items: center;
+    text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -247,18 +262,21 @@ p {
     grid-area: top-right;
     justify-items: center;
     align-items: center;
+    text-align: center;
 }
 
 #img_4 {
     grid-area: middle-left;
     justify-items: center;
     align-items: center;
+    text-align: center;
 }
 
 #img_5 {
     grid-area: middle-middle;
     justify-items: center;
     align-items: center;
+    text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -271,18 +289,21 @@ p {
     grid-area: middle-right;
     justify-items: center;
     align-items: center;
+    text-align: center;
 }
 
 #img_7 {
     grid-area: bottom-left;
     justify-items: center;
     align-items: center;
+    text-align: center;
 }
 
 #img_8 {
     grid-area: bottom-middle;
     justify-items: center;
     align-items: center;
+    text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -295,6 +316,7 @@ p {
     grid-area: bottom-right;
     justify-items: center;
     align-items: center;
+    text-align: center;
 }
 
 /*-----------------------------game.html-------------------------------------*/
@@ -315,7 +337,7 @@ p {
 }
 
 .col-6 {
-    padding: 5vh;
+    padding: 5vh 2vh 5vh 2vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -381,6 +403,15 @@ p {
 .navigation {
     text-align: center;
 }
+
+@media only screen and (max-width: 330px) {
+    #level {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+
 
 
 /*-----------------------------contact.html-------------------------------------*/

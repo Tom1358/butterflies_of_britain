@@ -247,11 +247,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (good === false) { // if player's choices don't match with computer's
-            $('#level').text('Wrong butterfly...');
-            butterflyImageOne.style.backgroundColor = '#00FF00';
-            butterflyImageTwo.style.backgroundColor = '#800000';
-            butterflyImageThree.style.backgroundColor = '#FFFF00';
-            butterflyImageFour.style.backgroundColor = '#0000FF';
+            setTimeout(function () { 
+                $('#level').text('Wrong butterfly...');
+                butterflyImageOne.style.backgroundColor = '#00FF00';
+                butterflyImageTwo.style.backgroundColor = '#800000';
+                butterflyImageThree.style.backgroundColor = '#FFFF00';
+                butterflyImageFour.style.backgroundColor = '#0000FF';
+            }, 500);
             setTimeout(function () {
                 clearColor();
                 firstArray = [];
@@ -260,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 playerOrder = [];
                 $('.butterflies').css("cursor", "");
                 setTimeout(tryAgain(), 800);
-            }, 400);
+            }, 2000);
         }
 
         //End of game
