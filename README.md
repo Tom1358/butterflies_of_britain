@@ -123,6 +123,22 @@ The font Nunito from Google Fonts was chosen as it is clean, clear and basic, wi
 ------------------------------
 ### Manual Testing:
 ------------------------------
+#### Navigation Testing
+* On the home page click 'Play Game' and verify this opens the game page.
+* Click 'Home' to verify returning to the home page works.
+* Click 'Contact' to verify this opens the contact page.
+* Click 'Home' to verify returning to the home page works.
+
+#### Contact Form Testing
+* Fill in all rows of the form with the required information.
+* Click on 'Submit' button.
+* Verify that 'sending...' appears in the button.
+* Verify that an alert message pops up.
+* Verify that the sent message has been received.
+
+### Gameplay Testing
+* Click on 'Play' (arrow) button to start game.
+* 
 
 #### Bugs Discovered
 ------------------------------

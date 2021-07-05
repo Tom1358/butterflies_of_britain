@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         //End of game
-        if (playerOrder.length == 5 && good) {
+        if (playerOrder.length == 20 && good) {
             winGame();
         }
 
