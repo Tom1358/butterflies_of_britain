@@ -97,13 +97,16 @@ document.addEventListener('DOMContentLoaded', function () {
     function compTurn() {
         $('#level').text('Level' + ' ' + level);
         console.log("LEVEL: ", level);
-        for (i = 0; i < 1; i++) {
-            roundOrder.push(Math.floor(Math.random() * 4) + 1);
-        }
+        
+        awaiting_action = false;
+
+        roundOrder.push(Math.floor(Math.random() * 4) + 1);
+        
         setTimeout(function () {
-            console.log("RoundOrder: ", roundOrder.length);
+            console.log("RoundOrder: ", roundOrder);
             for (i = 0; i < roundOrder.length; i++) {
                 butterflyFlash(i); // for the number of numbers in the 'round order' array, the butterflies will flash
+                
             }
         }, 400);
     }
@@ -114,21 +117,26 @@ document.addEventListener('DOMContentLoaded', function () {
             if (roundOrder[i] === 1) {
                 runningSequence.push(i);
                 butterflyOne();
+                console.log('Running Sequence: ', runningSequence)
             }
             if (roundOrder[i] === 2) {
                 runningSequence.push(i);
                 butterflyTwo();
+                console.log('Running Sequence: ', runningSequence)
             }
             if (roundOrder[i] === 3) {
                 runningSequence.push(i);
                 butterflyThree();
+                console.log('Running Sequence: ', runningSequence)
             }
             if (roundOrder[i] === 4) {
                 runningSequence.push(i);
                 butterflyFour();
+                console.log('Running Sequence: ', runningSequence)
             }
             if (runningSequence.length === roundOrder.length) {
                 setTimeout(function () {
+                    console.log('PlayerTurn starts')
                     playerTurn();
                 }, 800);
             }
@@ -224,11 +232,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function check() {
         let firstArray = playerOrder.toString();
         let secondArray = roundOrder.toString();
-        console.log("First: ", firstArray); // help to ensure game is functioning correctly
-        console.log("Second: ", secondArray);
+        console.log("Player Sequence: ", firstArray); // help to ensure game is functioning correctly
+        console.log("Computer Sequence: ", secondArray);
         if (firstArray.length !== secondArray.length) {
             playerTurn(); // if player hasn't chosen the same number of butterflies as the computer, it continues to be their turn
-            console.log('Player Order:', playerOrder)
         } else {
             if (firstArray !== secondArray) {
                 good = false; // if player's choices don't match with computer's
@@ -240,6 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     firstArray = [];
                     secondArray = [];
                     playerOrder = [];
+                    runningSequence = [];
                     $('.butterflies').css("cursor", "");
                     setTimeout(compTurn(), 800);
                 }, 2000);
@@ -266,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         //End of game
-        if (playerOrder.length == 20 && good) {
+        if (playerOrder.length == 5 && good) {
             winGame();
         }
 
