@@ -96,14 +96,13 @@ The font Nunito from Google Fonts was chosen as it is clean, clear and basic, wi
 ------------------------------
 ### Automated Testing:
 
-#### **Validation Services**
+#### *Validation Services*
 
 * The W3C CSS Validation Service - Jigsaw was used for CSS code in this project, which the code passed with no errors or warnings.
 * The W3C Markup Validation Service was used for HTML code in this project, and the code passed with no errors or warnings.
 
-------------------------------
-#### **User Stories Testing**
-------------------------------
+#### *User Stories Testing*
+
 #### As a individual wanting to learn more about butterflies, I want to:
 * Be introduced to the names of several types of butterfly.
     * On the homepage, there are nine butterflies for desktop, and six butterflies for mobile viewing, all of which are labelled.
@@ -123,33 +122,51 @@ The font Nunito from Google Fonts was chosen as it is clean, clear and basic, wi
 ------------------------------
 ### Manual Testing:
 ------------------------------
-#### Navigation Testing
+#### *Navigation Testing*
 * On the home page click 'Play Game' and verify this opens the game page.
+* On the game page, click 'Home' to verify returning to the home page works.
+* On the home page, click 'Contact' to verify this opens the contact page.
 * Click 'Home' to verify returning to the home page works.
-* Click 'Contact' to verify this opens the contact page.
+* On the game screen, click 'Contact' to verify this opens the contact page.
 * Click 'Home' to verify returning to the home page works.
 
-#### Contact Form Testing
+
+#### *Contact Form Testing*
 * Fill in all rows of the form with the required information.
 * Click on 'Submit' button.
 * Verify that 'sending...' appears in the button.
 * Verify that an alert message pops up.
 * Verify that the sent message has been received.
 
-### Gameplay Testing
+#### *Gameplay Testing*
 * Click on 'Play' (arrow) button to start game.
-* 
+* Confirm message after each level is correct, and formatted correctly for aesthetic purposes.
+* Try and click on butterflies while it is computer's turn.
+* Select the wrong choice from two random levels (chose levels 2 and 4) to confirm that game recognises player's choice does not match computer's, and that the 'wrong' message displays, with the option to replay if the user wishes.
 
-#### Bugs Discovered
-------------------------------
-#### Solved Bugs
-------------------------------
+#### *Mobile Device Testing*
+* It was confirmed through Chrome DevTools that all optional devices showed all pages in full, there was no unviewable parts of any page, and all parts of the website functioned as they should.
 
-#### Known Bugs
-------------------------------
+### Bugs Discovered
 
-------------------------------
-#### Further Testing
+#### *Solved Bugs*
+
+* All butterflies flashed at once rather than in sequence.
+    * Added  `(time) * i` to the setTimeout end of the butterflyFlash function in game.js - ref [Stack Overflow](https://stackoverflow.com/questions/37497872/how-to-save-clear-settimeouts-array-using-loops-index).
+* Initially there was the 'check' function referenced in the playerTurn function.  However, each click by the player would increase the amount in the array double (1, 3, 6, 12, 24...)
+    * Took out the 'check' reference and added it to separate event listeners for each butterfly click.
+* Audio 'mute' function was not working.
+    * It seemed that the JavaScript and HTML were not collaborating effectively - using both jQuery and JavaScript, nothing affected the HTML audio element.
+    * Took out of game.html, and embedded into JavaScript directly for each butterfly with the code:
+     ` let audio = new Audio('assets/sounds/sound_one.mp3');
+            audio.play();`
+
+#### *Known Bugs*
+* Limitations of game:
+    * Player can click on other butterflies while it is computer's turn.
+    * Even if player makes a wrong choice their turn will not finish until they have selected the same number of butterflies as the computer flashed for its turn.
+
+### Further Testing
 All pages were viewed on all devides and orientations available on Chrome Developer Tools.
 
 ------------------------------
