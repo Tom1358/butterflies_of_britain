@@ -3,7 +3,7 @@
 Butterflies are a natural beauty that are underappreciated by many people.  This website will aim to help users to name some of the more common butterflies that they may see in their garden or in local parks.<br>
 It will provide users with the images and names of several common butterflies in Britain, and will then lead to a ‘Simon Says’-based memory game that will test their knowledge of the butterflies’ names.
 
-Screenshot of Homepage
+![Image of Homepage](assets/images/Responsive.PNG)
 
 ------------------------------
 ## UX
@@ -83,7 +83,7 @@ The font Nunito from Google Fonts was chosen as it is clean, clear and basic, wi
 ### Validation Services
 * Validator.w3.org was used to validate the HTML code.
 * Jigsaw.w3.org/css-validator was used to validate the CSS code.
-* JSHint was used to validate the JacvaScript code.
+* JSHint was used to validate the JavaScript code.
 
 ### Tools
 * Git was used to handle version control.
