@@ -31,7 +31,7 @@ body {
 }
 
 #background-image {
-    background: url("/assets/images/butterfly_hero.jpg");
+    background: url("https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/images/butterfly_hero.jpg?raw=true");
     background-size: cover;
     height: 100vh;
     width: 100%;
