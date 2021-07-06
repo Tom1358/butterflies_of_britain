@@ -100,6 +100,7 @@ The font Nunito from Google Fonts was chosen as it is clean, clear and basic, wi
 
 * The W3C CSS Validation Service - Jigsaw was used for CSS code in this project, which the code passed with no errors or warnings.
 * The W3C Markup Validation Service was used for HTML code in this project, and the code passed with no errors or warnings.
+* JSHint was used to validate the JavaScript code, which passed with no errors.
 
 #### *User Stories Testing*
 
@@ -160,10 +161,11 @@ The font Nunito from Google Fonts was chosen as it is clean, clear and basic, wi
     * Took out of game.html, and embedded into JavaScript directly for each butterfly with the code:
      ` let audio = new Audio('assets/sounds/sound_one.mp3');
             audio.play();`
+* Player could click on other butterflies while it was computer's turn.
+    * Added a boolean value to allow whether user could click on butterflies or not (only if 'awaiting_action' was *true* would the player be able to register a click).
 
 #### *Known Bugs*
 * Limitations of game:
-    * Player can click on other butterflies while it is computer's turn.
     * Even if player makes a wrong choice their turn will not finish until they have selected the same number of butterflies as the computer flashed for its turn.
 
 ### Further Testing
