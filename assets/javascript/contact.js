@@ -19,4 +19,4 @@ window.onload = function() {
             }); return false; // prevents all information in form disappearing when sent - so user has reference to what they have sent
 });
 
-}
+};
