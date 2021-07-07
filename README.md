@@ -7,7 +7,7 @@ It will provide users with the images and names of several common butterflies in
 
 ------------------------------
 ## UX
-------------------------------
+
 This website is aimed for anyone who is wanting to become familiar with common butterflies that they may see.  It is only focused on the names of common butterflies; it is assumed that with this information, people wanting more would then be able to use those names to investigate other sources further.
 
 ### User Stories
@@ -22,7 +22,7 @@ As a developer, I want:
 * For users to be able to contact me for questions or feedback on the website.
 
 ### Wireframes
-Balsamiq was used to design the wireframes for this project.  As the project was developed, the original design of a five-page website was redesigned to a three-page website to streamline and simplify the experience.  
+Balsamiq was used to design the wireframes for this project.  As the project was developed, the original design was a five-page website (comprising homepage, 'Butterflies of Britain' page, instruction for game page, game page, and contact page), though this was redesigned to a three-page website to streamline and simplify the experience.  
 
 #### Original wireframes
 * [desktop homepage](https://github.com/Tom1358/butterflies_of_britain/blob/master/assets/wireframes/original/Desktop%20Home%20Page.png?raw=true)
@@ -43,14 +43,13 @@ Balsamiq was used to design the wireframes for this project.  As the project was
 By amending the website in this way, it means fewer clicks for the user, and a simpler, cleaner, more satisfying experience.
 
 ### Design
-Basic colours of white and black were used for text colours and tables, to ensure contrast was high and easily legible.<br>
-#567d46 was used - a grassy green - for the links between pages. <br>
-White text was used when needed over images to ensure font was easily legible. <br>
+Basic colours of white and black were used for high contrast in links and buttons, to ensure ease of reading.  For this same reason, white was chosen as text/ header text colour.<br>
+It was attempted to ensure background images were dark enough to allow the contrast of the text to be clear and easily legible; the background image of the home page was dimmed to ensure the title was clear. <br>
 The font Nunito from Google Fonts was chosen as it is clean, clear and basic, without being overly ostentatious. Sans Serif is the fallback font in case Nunito does not load correctly.
 
 ------------------------------
 ## Features
-------------------------------
+
 ### Existing features
 * The home page features links to the game and the contact page.
 * The game features links to the home page and the contact page.
@@ -66,7 +65,7 @@ The font Nunito from Google Fonts was chosen as it is clean, clear and basic, wi
 * Ability to pause the game, access the home screen or contact page, and go back to the game to continue where they left off.
 ------------------------------
 ## Technologies Used
-------------------------------
+
 ### Languages
 * HTML was the main language of this project.
 * CSS was used to style the HTML.
@@ -88,12 +87,12 @@ The font Nunito from Google Fonts was chosen as it is clean, clear and basic, wi
 ### Tools
 * Git was used to handle version control.
 * GitHub was used to store and share project code.
-* Am I Responsive was used to create images in this Readme file of each page displayed on different screen sizes.
+* Am I Responsive was used to create the head image in this Readme file of the homepage displayed on different screen sizes.
 * Balsamiq was used to create the wireframes during the design process.
 
 ------------------------------
 ## Testing
-------------------------------
+
 ### Automated Testing:
 
 #### *Validation Services*
@@ -120,9 +119,9 @@ The font Nunito from Google Fonts was chosen as it is clean, clear and basic, wi
     * As the game mechanics work, it is an entertaining game that serves its purpose.
 * For users to be able to contact me for questions or feedback on the website.
     * Users are able to send feedback or requests using the form provided.
-------------------------------
+
 ### Manual Testing:
-------------------------------
+
 #### *Navigation Testing*
 * On the home page click 'Play Game' and verify this opens the game page.
 * On the game page, click 'Home' to verify returning to the home page works.
@@ -154,7 +153,7 @@ The font Nunito from Google Fonts was chosen as it is clean, clear and basic, wi
 
 * All butterflies flashed at once rather than in sequence.
     * Added  `(time) * i` to the setTimeout end of the butterflyFlash function in game.js - ref [Stack Overflow](https://stackoverflow.com/questions/37497872/how-to-save-clear-settimeouts-array-using-loops-index).
-* Initially there was the 'check' function referenced in the playerTurn function.  However, each click by the player would increase the amount in the array double (1, 3, 6, 12, 24...)
+* Initially there was the 'check' function referenced in the playerTurn function.  However, this resulted in a number being pushed into the array after each click being added on by level number (1, 3, 6, 10, 15...)
     * Took out the 'check' reference and added it to separate event listeners for each butterfly click.
 * Audio 'mute' function was not working.
     * It seemed that the JavaScript and HTML were not collaborating effectively - using both jQuery and JavaScript, nothing affected the HTML audio element.
@@ -173,7 +172,7 @@ All pages were viewed on all devides and orientations available on Chrome Develo
 
 ------------------------------
 ## Deployment
-------------------------------
+
 ### Github pages
 The project was deployed to Github Pages using the following steps:
 * Log in to Github and navigate to the Github repository
@@ -185,22 +184,22 @@ The project was deployed to Github Pages using the following steps:
 
 ### How to Run Project Locally
 To clone this project into Gitpod you will need:
-* A Github account. Create a Github account here
-* Google Chrome browser.
+* A Github account. Create a Github account [here](https://github.com/).
+* Open the Google Chrome browser.
 Then, follow these steps:
-* Install the Gitpod Browser Extensions for Chrome
-* Restart your browser.
-* Log into Gitpod with your account.
-* Navigate to the Project Github repository
-* Click the green 'Gitpod' button. This will trigger a new Gitpod workspace, created from the code in Github, where you can work locally.
+    * Install the Gitpod Browser Extensions for Chrome
+    * Restart your browser.
+    * Log into Gitpod with your account.
+    * Navigate to the Project Github repository
+    * Click the green 'Gitpod' button. This will trigger a new Gitpod workspace, created from the code in Github, where you can work locally.
 
 ------------------------------
 ## Credits
-------------------------------
+
 ### Content
 
 All text in the website has been written by myself.<br>
-Images of butterflies were taken from:
+Images of butterflies and information/ names were taken from:
 * www.unsplash.com
 * www.pixabay.com 
 * https://butterfly-conservation.org/butterflies/identify-a-butterfly 
@@ -220,11 +219,10 @@ Images of butterflies were taken from:
 
 ------------------------------
 ## Acknowledgements 
-------------------------------
 
 Special thanks to my mentor Gerry Mcbride for patiently going through my code and correcting where necessary, giving helpful ideas and direction, and keeping me informed what is expected of my website and code in industry.
 
 ------------------------------
 ## Disclaimer
-------------------------------
+
 The contents of this website are for educational purposes only.
